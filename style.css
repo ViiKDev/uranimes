@@ -1,3 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
 body {
     background-color: rgb(0,0,0,0.9);
+}
+
+.footer {
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    background: #23232e;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .5;
+    font-weight: 200;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i.fa-linkedin-square {
+    color: rgb(78, 125, 194);
+}
+
+.socials a:hover i.fa-facebook {
+    color: rgb(110, 110, 255);
+}
+
+.socials a:hover i.fa-instagram {
+    color: rgb(176, 85, 199);
+}
+
+.socials a:hover i.fa-twitter {
+    color: rgb(79, 238, 238);
+}
+
+.socials a:hover i.fa-github {
+    color: rgb(145, 68, 218);
+}
+
+.scrollingArea {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.back-to-top {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.6;
+    background-color: grey;
 }
