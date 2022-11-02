@@ -42,7 +42,7 @@ body .link {
 
 @font-face {
 	font-family: 'opensans-r';
-	src: url('fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
+	src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
 	/* src: url('fonts/OpenSans/OpenSans-Regular.ttf'); */
 	font-weight:normal;
 	font-style:normal;
@@ -51,7 +51,7 @@ body .link {
 }
 @font-face {
 	font-family: 'opensans-b';
-	src: url('fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
+	src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
 	font-weight:500;
 	font-style:normal;
 	font-stretch:100%;
@@ -59,13 +59,13 @@ body .link {
 }
 @font-face {
 	font-family: 'ubuntu-r';
-	src: url('fonts/Ubuntu/Ubuntu-Regular.ttf');
+	src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
 	font-weight:normal;
 	font-style:normal;
 }
 @font-face {
 	font-family: 'kanit-r';
-	src: url('fonts/Kanit/Kanit-Regular.ttf');
+	src: url('../fonts/Kanit/Kanit-Regular.ttf');
 	font-weight:normal;
 	font-style:normal;
 }
@@ -182,19 +182,25 @@ body .link {
     bottom: 40px;
     right: 50px;
     text-decoration: none;
-    text-align: center;
     line-height: 40px;
+    text-align: center;
     color: white;
     font-size: 20px;
     opacity: 0.6;
     background-color: grey;
 }
 
-h1.animeTitle {
-	padding: 10px 10px;
+.back-to-top:hover {
+	color:white;
 }
 
-/*NAVBAR
+h1.animeTitle {
+	padding: 10px 10px;
+	font-family: kanit-r;
+	font-weight: normal;
+}
+
+/*NAVBAR OLD
 
 .navigation-bar {
     width: 100%;
@@ -227,4 +233,34 @@ h1.animeTitle {
 	color:white;
 }
 
-NAVBAR*/
+NAVBAR OLD*/
+
+.sIcon {
+	opacity:1;
+	position:absolute;
+	margin-top:11px;
+	transition:all 0.3s ease-in-out;
+}
+
+.search {
+	cursor:default;
+	width:38px;
+	transition:all 0.3s ease-in-out;
+}
+
+.searchDiv {
+	width:38px;
+	height:38px;
+	border-radius:20px;
+	text-align:center;
+	cursor:pointer;
+	background-color:rgba(140,220,30,0.2);
+}
+
+.searchDiv:focus-within > form .search {
+	width:250px;
+}
+
+.searchDiv:focus-within > i .sIcon {
+	opacity:0;
+}

@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="wwwroot/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<title>UrAnimes</title>
 	<style>
@@ -14,6 +15,7 @@
 			color: lightblue;
 			font-size: 15px;
 			margin-left: 40px;
+			transition: all 0.2s ease-in-out;
 		}
 
 		.link:hover {
@@ -28,11 +30,61 @@
 
 		h1 {
 			padding: 10px 10px;
+			font-family: kanit-r;
+		}
+
+		.active {
+			color: rgb(108,117,125);
+		}
+
+		.active:hover {
+			color: rgb(108,117,125);
+		}
+
+		.nav-link {
+			margin: 0px 15px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		/* .nav-link .active {
+			color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+		} */
+
+		.nav-link:not(.active):hover {
+			opacity: 0.6;
 		}
 	</style>
 </head>
 
 <body id="home">
+	<header class="p-3 text-bg-dark">
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+					style="margin-right:30px;">
+					<img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
+				</a>
+
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="#" class="nav-link px-2 active">Home</a></li>
+					<li><a href="#" onclick="randomSite();" class="nav-link px-2 text-white">Lucky</a></li>
+					<li><a href="#Contact" class="nav-link px-2 text-white">Contact</a></li>
+				</ul>
+				<div class="searchDiv">
+					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+						<i class="fa fa-search sIcon"></i>
+						<input type="search" class="form-control form-control-dark text-bg-dark search"
+							placeholder="Search..." aria-label="Search">
+					</form>
+				</div>
+
+				<div class="text-end">
+					<!-- <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button> -->
+				</div>
+			</div>
+		</div>
+	</header>
 	<!--<nav class="navigation-bar">
 		<img class="logo" src="logo.png">
 		<a href="#">Home</a>
@@ -109,8 +161,7 @@
 			<a href="Animes/Dog Days.html" class="link">Dog Days</a>
 		</div>
 		<div>
-			<a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki, Atama No
-				Ue</a>
+			<a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki, Atama No Ue</a>
 		</div>
 		<div>
 			<a href="Animes/Elfen Lied.html" class="link">Elfen Lied</a>
@@ -140,8 +191,7 @@
 			<a href="Animes/Hina Logi From Luck & Logic.html" class="link">Hina Logi From Luck & Logic</a>
 		</div>
 		<div>
-			<a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan Shoujo No
-				Dorei Majutsu</a>
+			<a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan Shoujo No Dorei Majutsu</a>
 		</div>
 		<div>
 			<a href="Animes/Itsuka Tenma No Kuro Usagi.html" class="link">Itsuka Tenma No Kuro Usagi</a>
@@ -189,8 +239,7 @@
 			<a href="Animes/Koro-sensei Quest!.html" class="link">Koro-sensei Quest!</a>
 		</div>
 		<div>
-			<a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no
-				Monogatari</a>
+			<a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no Monogatari</a>
 		</div>
 		<div>
 			<a href="Animes/Love Live! Sunshine!!.html" class="link">Love Live! Sunshine!!</a>
@@ -235,12 +284,10 @@
 			<a href="Animes/One Room.html" class="link">One Room</a>
 		</div>
 		<div>
-			<a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To Osananajimi Ga
-				Shuraba Sugiru</a>
+			<a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To Osananajimi Ga Shuraba Sugiru</a>
 		</div>
 		<div>
-			<a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi Ga,
-				Gakuen Love Comedy</a>
+			<a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi Ga, Gakuen Love Comedy</a>
 		</div>
 		<div>
 			<a href="Animes/Phantasy Star Online 2.html" class="link">Phantasy Star Online 2</a>
@@ -258,8 +305,7 @@
 			<a href="Animes/Ryuuou No Oshigoto.html" class="link">Ryuuou No Oshigoto</a>
 		</div>
 		<div>
-			<a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu Ga
-				Chotto Okashiinda Ga</a>
+			<a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga</a>
 		</div>
 		<div>
 			<a href="Animes/Schwarzesmarken.html" class="link">Schwarzesmarken</a>
@@ -280,19 +326,16 @@
 			<a href="Animes/Shakugan No Shana.html" class="link">Shakugan No Shana</a>
 		</div>
 		<div>
-			<a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu Gainen
-				Ga Sonzai Shinai Taikutsu Na Sekai</a>
+			<a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
 		</div>
 		<div>
 			<a href="Animes/Shokugeki No Souma.html" class="link">Shokugeki No Souma</a>
 		</div>
 		<div>
-			<a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html"
-				class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
+			<a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html" class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
 		</div>
 		<div>
-			<a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime
-				Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
+			<a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
 		</div>
 		<div>
 			<a href="Animes/Slow Start.html" class="link">Slow Start</a>
@@ -311,8 +354,7 @@
 			<a href="Animes/Tate No Yuusha No Nariagari.html" class="link">Tate No Yuusha No Nariagari</a>
 		</div>
 		<div>
-			<a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And Possibility
-				Control</a>
+			<a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And Possibility Control</a>
 		</div>
 		<div>
 			<a href="Animes/To Love-Ru Darkness.html" class="link">To Love-Ru Darkness</a>
@@ -344,7 +386,7 @@
 		<div>
 			<a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No Kishi</a>
 		</div>
-		<div class="footer" style="margin-top:20px;">
+		<div id="Contact" class="footer" style="margin-top:20px;">
 			<div class="footer-content">
 				<h3>VKDev</h3>
 				<p>Note that the website is under constant updates, any troubles please contact me!
@@ -356,7 +398,7 @@
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-github"></i></a></li>
+					<li><a href="github.com/ViiKDev"><i class="fa fa-github"></i></a></li>
 				</ul>
 			</div>
 			<div class="footer-bottom">
@@ -364,6 +406,16 @@
 			</div>
 		</div>
 		<a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+	</div>
+	<script>
+	
+		function randomSite() {
+			var tds = document.getElementsByClassName('link');
+			var rand = Math.floor( Math.random() * tds.length );
+        		location.href = tds[rand];
+		}
+	
+	</script>
 </body>
 
 </html>
