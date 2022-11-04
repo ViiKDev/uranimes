@@ -10,6 +10,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+	<script language="javascript"> 
+		function setCookie(nome, valor, dias){ 
+			diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
+			dias = new Date(diasms); 
+			expires = dias.toGMTString(); 
+			document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
+		} 
+	</script>
 	<link rel="stylesheet" href="wwwroot/css/sliderStyle.css">
 	<link rel="stylesheet" href="wwwroot/css/style.css">
 	<link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
@@ -62,31 +70,24 @@
 		.nav-link:not(.active):hover {
 			opacity: 0.6;
 		}
-
-		.carousel-indicators button {
-			border-radius: 100%;
-			background-color: rgba(255, 255, 255, 0) !important;
-			outline: 1px solid white;
-			border: 2px solid transparent !important;
-			width: 6px !important;
-			height: 6px !important;
-			transition: all 0.3s ease-in-out;
-		}
-
-		.carousel-indicators button.active {
-			background-color: white !important;
-		}
-
-		#carouselExampleIndicators {
-			width: 70%;
-			margin: 90px 15% 20px 15%;
-			border: 2px solid rgb(33, 37, 41);
-
-		}
 	</style>
 </head>
 
 <body id="home">
+	<script language="javascript">
+		if (!document.cookie){
+			setCookie("cookie", "1", 365);
+			document.write("<p style='display:none;'>1</p>");
+		} else {
+			var cont = document.cookie;
+			var dividindo = cont.split("=");
+			//document.write(dividindo[1]);
+			var numero = parseInt(dividindo[1]);
+			var soma = numero + 1;
+			document.write("<p style='display:none;'>soma</p>");
+			setCookie("cookie", soma, 365);
+		}
+	</script> 
 	<header class="p-3 text-bg-dark fixed-top">
 		<div class="container">
 			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">

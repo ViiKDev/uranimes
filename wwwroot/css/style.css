@@ -322,24 +322,60 @@ NAVBAR OLD*/
     --close: 0;
 }
 
+.carousel-indicators {
+	margin-bottom:1%;
+}
+
+.carousel-indicators button {
+	border-radius: 100%;
+	background-color: rgba(255, 255, 255, 0) !important;
+	outline: 1px solid white;
+	border: 2px solid transparent !important;
+	width: 6px !important;
+	height: 6px !important;
+	transition: all 0.3s ease-in-out;
+}
+
+.carousel-indicators button.active {
+	background-color: white !important;
+}
+
+#carouselExampleIndicators {
+	width: 70%;
+	margin: 90px 15% 20px 15%;
+	border: 2px solid rgb(33, 37, 41);
+}
+
 /* Custom Media Queries */
 
 @media (max-width: 991px) {
     #carouselExampleIndicators {
         margin-top: 160px !important;
     }
+	.carousel-indicators button {
+		width:5px !important;
+		height:5px !important;
+	}
 }
 
 @media (max-width: 335px) {
     #carouselExampleIndicators {
         margin-top: 220px !important;
     }
+	.carousel-indicators button {
+		width:4px !important;
+		height:4px !important;
+	}
 }
 
 @media (max-width: 233px) {
     #carouselExampleIndicators {
         margin-top: 240px !important;
     }
+	.carousel-indicators button {
+		width:3px !important;
+		height:3px !important;
+	}
 }
 
 /* Custom Media Queries */
