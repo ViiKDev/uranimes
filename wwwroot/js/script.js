@@ -30,3 +30,7 @@ function randomSite() {
     var rand = Math.floor(Math.random() * tds.length);
     location.href = tds[rand];
 }
+
+function slideItemClick(i) {
+    location.href = i;
+}

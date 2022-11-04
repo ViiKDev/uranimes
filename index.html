@@ -6,7 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+	<link rel="stylesheet" href="wwwroot/css/sliderStyle.css">
 	<link rel="stylesheet" href="wwwroot/css/style.css">
 	<link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
 	<title>UrAnimes</title>
@@ -88,7 +92,7 @@
 			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 				<a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
 					style="/* margin-right:30px; */">
-					<img src="wwwroot/img/logo.png" style="/* margin-bottom:5px; */" width="110px;">
+					<img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
 				</a>
 
 				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -124,13 +128,13 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active" data-bs-interval="5000">
-				<img src="wwwroot/img/slide1.jpg" class="d-block w-100" alt="...">
+				<img src="wwwroot/img/carousel/carousel1.jpg" class="d-block w-100" alt="...">
 			</div>
 			<div class="carousel-item" data-bs-interval="5000">
-				<img src="wwwroot/img/slide2.jpg" class="d-block w-100" alt="...">
+				<img src="wwwroot/img/carousel/carousel2.jpg" class="d-block w-100" alt="...">
 			</div>
 			<div class="carousel-item" data-bs-interval="5000">
-				<img src="wwwroot/img/slide3.jpg" class="d-block w-100" alt="...">
+				<img src="wwwroot/img/carousel/carousel3.jpg" class="d-block w-100" alt="...">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -144,6 +148,102 @@
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
+	<section id="slider">
+		<div class="container-slider">
+			<div class="subcontainer-slider">
+				<div class="slide-wrapper">
+					<div class="controller">
+						<div>
+							<h2>Animes Recomendados</h2>
+						</div>
+						<div id="controls">
+							<button class="voltar"><i class="fas fa-angle-left"></i></button>
+							<button class="avancar"><i class="fas fa-angle-right"></i></button>
+						</div>
+					</div>
+					<div class="my-slider">
+						<div>
+							<div class="slide">
+								<div class="slide-img img-1" onclick="slideItemClick('Animes/Akame Ga Kill.html')">
+									<a href="Animes/Akame Ga Kill.html">Akame Ga Kill</a>
+								</div>
+								<!-- <br>
+								<div>
+									<h3>California</h3>
+									<p>Los Angeles</p>
+								</div> -->
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-2" onclick="slideItemClick('Animes/Boku No Hero.html')">
+									<a href="Animes/Boku No Hero.html">Boku No Hero</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-3" onclick="slideItemClick('Animes/Darwin\'s Game.html')">
+									<a href="Animes/Darwin's Game.html">Darwin's Game</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-4"
+									onclick="slideItemClick('Animes/Kobayashi-San Chi No Maid Dragon.html')">
+									<a href="Animes/Kobayashi-San Chi No Maid Dragon.html">Kobayashi-San Chi No Maid
+										Dragon</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-5" onclick="slideItemClick('Animes/Mini Dragon.html')">
+									<a href="Animes/Mini Dragon.html">Mini Dragon</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-6" onclick="slideItemClick('Animes/Nanatsu No Taizai.html')">
+									<a href="Animes/Nanatsu No Taizai.html">Nanatsu No Taizai</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-7" onclick="slideItemClick('Animes/No Game No Life.html')">
+									<a href="Animes/No Game No Life.html">No Game No Life</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-8" onclick="slideItemClick('Animes/Shokugeki No Souma.html')">
+									<a href="Animes/Shokugeki No Souma.html">Shokugeki No Souma</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-9" onclick="slideItemClick('Animes/Tokyo Revengers.html')">
+									<a href="Animes/Tokyo Revengers.html">Tokyo Revengers</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="slide">
+								<div class="slide-img img-10" onclick="slideItemClick('Animes/Val X Love.html')">
+									<a href="Animes/Val X Love.html">Val X Love</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!--<nav class="navigation-bar">
 		<img class="logo" src="logo.png">
 		<a href="#">Home</a>
@@ -479,6 +579,7 @@
 	</div>
 	<script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
 	<script src="wwwroot/js/script.js"></script>
+	<script src="wwwroot/js/slider.js"></script>
 </body>
 
 </html>
