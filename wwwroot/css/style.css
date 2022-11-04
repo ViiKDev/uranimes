@@ -1,18 +1,27 @@
+:root {
+    --caixa-disp: none;
+    --tamanho-caixa: 0;
+    --color-search: white;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(0,0,0,0.9);
+    background-color: rgb(0, 0, 0, 0.9);
+	/* background: url(../img/bg.jpg) fixed center center;
+	background-size: cover;
+	overflow: hidden; */
 }
 
 body .link {
-	font-family:ubuntu-r;
+    font-family: ubuntu-r;
 }
 
 /*body:not(#home) .link {
@@ -20,54 +29,57 @@ body .link {
 }*/
 
 ::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #00000025;
-	border-radius: 10px;
+    background-color: #00000025;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgb(64, 64, 64);
-	border-radius: 10px;
+    background-color: rgb(64, 64, 64);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: rgb(44, 44, 44);
+    background-color: rgb(44, 44, 44);
 }
 
 /* Custom Fonts */
 
 @font-face {
-	font-family: 'opensans-r';
-	src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
-	/* src: url('fonts/OpenSans/OpenSans-Regular.ttf'); */
-	font-weight:normal;
-	font-style:normal;
-	font-stretch:100%;
-	letter-spacing:4px;
+    font-family: 'opensans-r';
+    src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
+    /* src: url('fonts/OpenSans/OpenSans-Regular.ttf'); */
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: 100%;
+    letter-spacing: 4px;
 }
+
 @font-face {
-	font-family: 'opensans-b';
-	src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
-	font-weight:500;
-	font-style:normal;
-	font-stretch:100%;
-	letter-spacing:4px;
+    font-family: 'opensans-b';
+    src: url('../fonts/OpenSans/OpenSans-Src.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: 100%;
+    letter-spacing: 4px;
 }
+
 @font-face {
-	font-family: 'ubuntu-r';
-	src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
-	font-weight:normal;
-	font-style:normal;
+    font-family: 'ubuntu-r';
+    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-	font-family: 'kanit-r';
-	src: url('../fonts/Kanit/Kanit-Regular.ttf');
-	font-weight:normal;
-	font-style:normal;
+    font-family: 'kanit-r';
+    src: url('../fonts/Kanit/Kanit-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Custom Fonts */
@@ -191,13 +203,13 @@ body .link {
 }
 
 .back-to-top:hover {
-	color:white;
+    color: white;
 }
 
 h1.animeTitle {
-	padding: 10px 10px;
-	font-family: kanit-r;
-	font-weight: normal;
+    padding: 10px 10px;
+    font-family: kanit-r;
+    font-weight: normal;
 }
 
 /*NAVBAR OLD
@@ -235,32 +247,77 @@ h1.animeTitle {
 
 NAVBAR OLD*/
 
-.sIcon {
-	opacity:1;
-	position:absolute;
-	margin-top:11px;
-	transition:all 0.3s ease-in-out;
-}
-
-.search {
-	cursor:default;
-	width:38px;
-	transition:all 0.3s ease-in-out;
-}
-
 .searchDiv {
-	width:38px;
-	height:38px;
-	border-radius:20px;
-	text-align:center;
-	cursor:pointer;
-	background-color:rgba(140,220,30,0.2);
+    width: 300px;
+    height: 38px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.searchDiv:focus-within > form .search {
-	width:250px;
+.icone {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
 }
 
-.searchDiv:focus-within > i .sIcon {
-	opacity:0;
+.botao {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--color-search);
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 38px;
+    height: 38px;
+}
+
+.fa-search {
+    transition: all 0.3s ease-in-out;
+    color: var(--color-search);
+}
+
+.barra {
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.barra:focus-within {
+    padding-left: 5px;
+    width: 100%
+}
+
+.caixa-texto {
+    width: 0;
+    display: var(--caixa-disp);
+    opacity: 0;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.caixa-texto::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .3;
+    pointer-events: all;
+}
+
+.caixa-texto:focus {
+    width: var(--tamanho-caixa);
+    display: var(--caixa-disp);
+    opacity: 1;
+}
+
+.caixa-texto:not(:focus) {
+    --close: 0;
 }

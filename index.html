@@ -6,8 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="wwwroot/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="wwwroot/css/style.css">
+	<link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
 	<title>UrAnimes</title>
 	<style>
 		.link {
@@ -34,11 +35,15 @@
 		}
 
 		.active {
-			color: rgb(108,117,125);
+			color: rgb(108, 117, 125);
 		}
 
 		.active:hover {
-			color: rgb(108,117,125);
+			color: rgb(108, 117, 125);
+		}
+
+		.active:focus {
+			color: rgb(108, 117, 125);
 		}
 
 		.nav-link {
@@ -53,38 +58,92 @@
 		.nav-link:not(.active):hover {
 			opacity: 0.6;
 		}
+
+		.carousel-indicators button {
+			border-radius: 100%;
+			background-color: rgba(255, 255, 255, 0) !important;
+			outline: 1px solid white;
+			border: 2px solid transparent !important;
+			width: 6px !important;
+			height: 6px !important;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.carousel-indicators button.active {
+			background-color: white !important;
+		}
+
+		#carouselExampleIndicators {
+			width: 70%;
+			margin: 90px 15% 20px 15%;
+			border: 2px solid rgb(33, 37, 41);
+
+		}
 	</style>
 </head>
 
 <body id="home">
-	<header class="p-3 text-bg-dark">
+	<header class="p-3 text-bg-dark fixed-top">
 		<div class="container">
 			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 				<a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-					style="margin-right:30px;">
-					<img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
+					style="/* margin-right:30px; */">
+					<img src="wwwroot/img/logo.png" style="/* margin-bottom:5px; */" width="110px;">
 				</a>
 
 				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="#" class="nav-link px-2 active">Home</a></li>
-					<li><a href="#" onclick="randomSite();" class="nav-link px-2 text-white">Lucky</a></li>
-					<li><a href="#Contact" class="nav-link px-2 text-white">Contact</a></li>
+					<li><a href="#" class="nav-link px-2 active">Início</a></li>
+					<li><a href="#" onclick="randomSite();" class="nav-link px-2 text-white">Sorte</a></li>
+					<li><a href="#Contact" class="nav-link px-2 text-white">Contato</a></li>
 				</ul>
 				<div class="searchDiv">
-					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-						<i class="fa fa-search sIcon"></i>
-						<input type="search" class="form-control form-control-dark text-bg-dark search"
-							placeholder="Search..." aria-label="Search">
-					</form>
+					<div class="icone">
+						<button class="botao" onclick="mostrarCaixa()"><i class="fa fa-search"></i></button>
+					</div>
+					<div class="barra">
+						<input type="search" spellcheck="false" placehoder="Buscar Anime..." class="caixa-texto"
+							id="pesquisa" onblur="mostrarCaixa()" />
+					</div>
 				</div>
 
-				<div class="text-end">
-					<!-- <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button> -->
-				</div>
+				<!-- <div class="text-end">
+					<button type="button" class="btn btn-outline-light me-2">Login</button>
+         				<button type="button" class="btn btn-warning">Sign-up</button>
+				</div> -->
 			</div>
 		</div>
 	</header>
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+				aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+				aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+				aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="5000">
+				<img src="wwwroot/img/slide1.jpg" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item" data-bs-interval="5000">
+				<img src="wwwroot/img/slide2.jpg" class="d-block w-100" alt="...">
+			</div>
+			<div class="carousel-item" data-bs-interval="5000">
+				<img src="wwwroot/img/slide3.jpg" class="d-block w-100" alt="...">
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+			data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
 	<!--<nav class="navigation-bar">
 		<img class="logo" src="logo.png">
 		<a href="#">Home</a>
@@ -94,7 +153,7 @@
 		<a href="#">Get in Touch</a>
 	</nav>-->
 	<h1 style="color:lightyellow;">
-		Movies and Series
+		Filmes e Séries
 	</h1>
 	<div class="scrollingArea">
 		<div>
@@ -161,7 +220,8 @@
 			<a href="Animes/Dog Days.html" class="link">Dog Days</a>
 		</div>
 		<div>
-			<a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki, Atama No Ue</a>
+			<a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki,
+				Atama No Ue</a>
 		</div>
 		<div>
 			<a href="Animes/Elfen Lied.html" class="link">Elfen Lied</a>
@@ -191,7 +251,8 @@
 			<a href="Animes/Hina Logi From Luck & Logic.html" class="link">Hina Logi From Luck & Logic</a>
 		</div>
 		<div>
-			<a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan Shoujo No Dorei Majutsu</a>
+			<a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan
+				Shoujo No Dorei Majutsu</a>
 		</div>
 		<div>
 			<a href="Animes/Itsuka Tenma No Kuro Usagi.html" class="link">Itsuka Tenma No Kuro Usagi</a>
@@ -239,7 +300,8 @@
 			<a href="Animes/Koro-sensei Quest!.html" class="link">Koro-sensei Quest!</a>
 		</div>
 		<div>
-			<a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no Monogatari</a>
+			<a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no
+				Monogatari</a>
 		</div>
 		<div>
 			<a href="Animes/Love Live! Sunshine!!.html" class="link">Love Live! Sunshine!!</a>
@@ -272,7 +334,7 @@
 			<a href="Animes/Nanatsu No Taizai.html" class="link">Nanatsu No Taizai</a>
 		</div>
 		<div>
-			<a href="Animes/Nausica� of the Valley of the Wind.html" class="link">Nausica� of the Valley of the Wind</a>
+			<a href="Animes/Nausicaä of the Valley of the Wind.html" class="link">Nausicaä of the Valley of the Wind</a>
 		</div>
 		<div>
 			<a href="Animes/No Game No Life.html" class="link">No Game No Life</a>
@@ -284,10 +346,12 @@
 			<a href="Animes/One Room.html" class="link">One Room</a>
 		</div>
 		<div>
-			<a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To Osananajimi Ga Shuraba Sugiru</a>
+			<a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To
+				Osananajimi Ga Shuraba Sugiru</a>
 		</div>
 		<div>
-			<a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi Ga, Gakuen Love Comedy</a>
+			<a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi
+				Ga, Gakuen Love Comedy</a>
 		</div>
 		<div>
 			<a href="Animes/Phantasy Star Online 2.html" class="link">Phantasy Star Online 2</a>
@@ -305,7 +369,8 @@
 			<a href="Animes/Ryuuou No Oshigoto.html" class="link">Ryuuou No Oshigoto</a>
 		</div>
 		<div>
-			<a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga</a>
+			<a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu
+				Ga Chotto Okashiinda Ga</a>
 		</div>
 		<div>
 			<a href="Animes/Schwarzesmarken.html" class="link">Schwarzesmarken</a>
@@ -326,16 +391,19 @@
 			<a href="Animes/Shakugan No Shana.html" class="link">Shakugan No Shana</a>
 		</div>
 		<div>
-			<a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
+			<a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu
+				Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
 		</div>
 		<div>
 			<a href="Animes/Shokugeki No Souma.html" class="link">Shokugeki No Souma</a>
 		</div>
 		<div>
-			<a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html" class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
+			<a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html"
+				class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
 		</div>
 		<div>
-			<a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
+			<a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime
+				Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
 		</div>
 		<div>
 			<a href="Animes/Slow Start.html" class="link">Slow Start</a>
@@ -354,7 +422,8 @@
 			<a href="Animes/Tate No Yuusha No Nariagari.html" class="link">Tate No Yuusha No Nariagari</a>
 		</div>
 		<div>
-			<a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And Possibility Control</a>
+			<a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And
+				Possibility Control</a>
 		</div>
 		<div>
 			<a href="Animes/To Love-Ru Darkness.html" class="link">To Love-Ru Darkness</a>
@@ -384,21 +453,22 @@
 			<a href="Animes/Wonder Egg Priority.html" class="link">Wonder Egg Priority</a>
 		</div>
 		<div>
-			<a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No Kishi</a>
+			<a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No
+				Kishi</a>
 		</div>
 		<div id="Contact" class="footer" style="margin-top:20px;">
 			<div class="footer-content">
 				<h3>VKDev</h3>
-				<p>Note that the website is under constant updates, any troubles please contact me!
+				<p>Note que o site está sob constantes atualizações, quaisquer problemas por favor me contate!
 				</p>
-				<h4 style="color:grey;font-family:opensans-b;">Have a good day!
+				<h4 style="color:grey;font-family:opensans-b;">Tenha um bom dia!
 				</h4>
 				<ul class="socials">
 					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="github.com/ViiKDev"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://github.com/ViiKDev" target="_blank"><i class="fa fa-github"></i></a></li>
 				</ul>
 			</div>
 			<div class="footer-bottom">
@@ -407,15 +477,8 @@
 		</div>
 		<a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
 	</div>
-	<script>
-	
-		function randomSite() {
-			var tds = document.getElementsByClassName('link');
-			var rand = Math.floor( Math.random() * tds.length );
-        		location.href = tds[rand];
-		}
-	
-	</script>
+	<script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="wwwroot/js/script.js"></script>
 </body>
 
 </html>
