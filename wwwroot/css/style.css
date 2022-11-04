@@ -321,3 +321,25 @@ NAVBAR OLD*/
 .caixa-texto:not(:focus) {
     --close: 0;
 }
+
+/* Custom Media Queries */
+
+@media (max-width: 991px) {
+	#carouselExampleIndicators {
+		margin-top:160px !important;
+	}
+}
+
+@media (max-width: 335px) {
+	#carouselExampleIndicators {
+		margin-top:220px !important;
+	}
+}
+
+@media (max-width: 233px) {
+	#carouselExampleIndicators {
+		margin-top:240px !important;
+	}
+}
+
+/* Custom Media Queries */
