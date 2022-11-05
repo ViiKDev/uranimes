@@ -20,8 +20,27 @@ body {
 	overflow: hidden; */
 }
 
-body .link {
-    font-family: ubuntu-r;
+.link {
+	text-decoration: none;
+	color: lightblue;
+	font-size: 15px;
+	margin-left: 40px;
+	font-family: ubuntu-r;
+	transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+	margin-left: 45px;
+	color: purple;
+	font-size: 17px;
+}
+
+.link:focus {
+	color: rgb(185, 64, 215);
+}
+
+.link:visited {
+	color:crimson;
 }
 
 /*body:not(#home) .link {
