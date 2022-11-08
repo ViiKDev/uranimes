@@ -10,6 +10,32 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+	<!-- <script>
+		window.onload = function () {
+			var username = getCookie('username');
+			var nameInputed = getCookie('nameInputed');
+			var showAlert = getCookie('showAlert')
+			if (username != '' && showAlert == true) {
+				alert("Bem-vindo(a) novamente, " + username + "!");
+			} else {
+				if (nameInputed == '') {
+					if (confirm("Você poderia informar seu nome?\nSomente para deixar o site mais amigável!") == true) {
+						username = prompt("Ótimo!\nPor favor insira seu nome:", "Harry Potter");
+						nameInputed = true;
+						setCookie('username', username, 365);
+						setCookie('nameInputed', nameInputed, 365);
+						alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!")
+					} else {
+						nameInputed = false;
+						setCookie('nameInputed', nameInputed, 365);
+					}
+				}
+			}
+		};
+		window.onbeforeunload = function () {
+
+		};
+	</script> -->
 	<!-- <script language="javascript"> 
 		function setCookie(nome, valor, dias){ 
 			diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
@@ -323,6 +349,9 @@
 		</div>
 		<div>
 			<a href="Animes/Guraburu!.html" class="link">Guraburu!</a>
+		</div>
+		<div>
+			<a href="Animes/Haikyuu!!.html" class="link">Haikyuu!</a>
 		</div>
 		<div>
 			<a href="Animes/Haiyore! Nyaruko-San.html" class="link">Haiyore! Nyaruko-San</a>
