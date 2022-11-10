@@ -1,604 +1,552 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-	<script>
-		window.onload = function () {
-			alert("Bem-vindo!\nAproveite os recém-chegados animes: Haikyuu, Chainsaw Man e One Piece!!")
-			// var username = getCookie('username');
-			// var nameInputed = getCookie('nameInputed');
-			// var showAlert = getCookie('showAlert')
-			// if (username != '' && showAlert == true) {
-			// 	alert("Bem-vindo(a) novamente, " + username + "!");
-			// } else {
-			// 	if (nameInputed == '') {
-			// 		if (confirm("Você poderia informar seu nome?\nSomente para deixar o site mais amigável!") == true) {
-			// 			username = prompt("Ótimo!\nPor favor insira seu nome:", "Harry Potter");
-			// 			nameInputed = true;
-			// 			setCookie('username', username, 365);
-			// 			setCookie('nameInputed', nameInputed, 365);
-			// 			alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!")
-			// 		} else {
-			// 			nameInputed = false;
-			// 			setCookie('nameInputed', nameInputed, 365);
-			// 		}
-			// 	}
-			// }
-		};
-		window.onbeforeunload = function () {
-			alert("Obrigado pela preferência!")
-		};
-	</script>
-	<!-- <script language="javascript"> 
-		function setCookie(nome, valor, dias){ 
-			diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
-			dias = new Date(diasms); 
-			expires = dias.toGMTString(); 
-			document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
-		} 
-	</script> -->
-	<link rel="stylesheet" href="wwwroot/css/sliderStyle.css">
-	<link rel="stylesheet" href="wwwroot/css/style.css">
-	<link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
-	<title>UrAnimes</title>
-	<style>
-		h1 {
-			padding: 10px 10px;
-			font-family: kanit-r;
-		}
-
-		.active {
-			color: rgb(108, 117, 125);
-		}
-
-		.active:hover {
-			color: rgb(108, 117, 125);
-		}
-
-		.active:focus {
-			color: rgb(108, 117, 125);
-		}
-
-		.nav-link {
-			margin: 0px 15px;
-			transition: all 0.3s ease-in-out;
-		}
-
-		/* .nav-link .active {
-			color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
-		} */
-
-		.nav-link:not(.active):hover {
-			opacity: 0.6;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <!-- <script language="javascript"> 
+     function setCookie(nome, valor, dias){ 
+        diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
+        dias = new Date(diasms); 
+        expires = dias.toGMTString(); 
+        document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
+     } 
+  </script> -->
+  <link rel="stylesheet" href="wwwroot/css/sliderStyle.css">
+  <link rel="stylesheet" href="wwwroot/css/style.css">
+  <link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
+  <title>UrAnimes</title>
+  <style>
+     h1 {
+        padding: 10px 10px;
+        font-family: kanit-r;
+     }
+     .active {
+        color: rgb(108, 117, 125);
+     }
+     .active:hover {
+        color: rgb(108, 117, 125);
+     }
+     .active:focus {
+        color: rgb(108, 117, 125);
+     }
+     .nav-link {
+        margin: 0px 15px;
+        transition: all 0.3s ease-in-out;
+     }
+     /* .nav-link .active {
+        color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+     } */
+     .nav-link:not(.active):hover {
+        opacity: 0.6;
+     }
+  </style>
 </head>
-
 <body id="home">
-	<!-- <script language="javascript">
-		if (!document.cookie){
-			setCookie("cookie", "1", 365);
-			document.write("<p style='display:none;'>1</p>");
-		} else {
-			var cont = document.cookie;
-			var dividindo = cont.split("=");
-			//document.write(dividindo[1]);
-			var numero = parseInt(dividindo[1]);
-			var soma = numero + 1;
-			document.write("<p style='display:none;'>" + soma + "</p>");
-			setCookie("cookie", soma, 365);
-		}
-	</script> -->
-	<header class="p-3 text-bg-dark fixed-top">
-		<div class="container">
-			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-				<a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-					style="/* margin-right:30px; */">
-					<img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
-				</a>
-
-				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="#" class="nav-link px-2 active">Início</a></li>
-					<li><a href="#" onclick="randomSite();" class="nav-link px-2 text-white">Sorte</a></li>
-					<li><a href="#Contact" class="nav-link px-2 text-white">Contato</a></li>
-				</ul>
-				<div class="searchDiv">
-					<div class="icone">
-						<button class="botao" onclick="mostrarCaixa()"><i class="fa fa-search"></i></button>
-					</div>
-					<div class="barra">
-						<input type="search" spellcheck="false" placehoder="Buscar Anime..." class="caixa-texto"
-							id="pesquisa" onblur="mostrarCaixa()" />
-					</div>
-				</div>
-
-				<!-- <div class="text-end">
-					<button type="button" class="btn btn-outline-light me-2">Login</button>
-         				<button type="button" class="btn btn-warning">Sign-up</button>
-				</div> -->
-			</div>
-		</div>
-	</header>
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-				aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-				aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-				aria-label="Slide 3"></button>
-		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active" data-bs-interval="5000">
-				<img src="wwwroot/img/carousel/carousel1.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item" data-bs-interval="5000">
-				<img src="wwwroot/img/carousel/carousel2.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item" data-bs-interval="5000">
-				<img src="wwwroot/img/carousel/carousel3.jpg" class="d-block w-100" alt="...">
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-			data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-			data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-	<section id="slider">
-		<div class="container-slider">
-			<div class="subcontainer-slider">
-				<div class="slide-wrapper">
-					<div class="controller">
-						<div>
-							<h2>Animes Recomendados</h2>
-						</div>
-						<div id="controls">
-							<button class="voltar"><i class="fas fa-angle-left"></i></button>
-							<button class="avancar"><i class="fas fa-angle-right"></i></button>
-						</div>
-					</div>
-					<div class="my-slider">
-						<div>
-							<div class="slide">
-								<div class="slide-img img-1" onclick="slideItemClick('Animes/Akame Ga Kill.html')">
-									<a href="Animes/Akame Ga Kill.html">Akame Ga Kill</a>
-								</div>
-								<!-- <br>
-								<div>
-									<h3>California</h3>
-									<p>Los Angeles</p>
-								</div> -->
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-2" onclick="slideItemClick('Animes/Boku No Hero.html')">
-									<a href="Animes/Boku No Hero.html">Boku No Hero</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-3" onclick="slideItemClick('Animes/Darwin\'s Game.html')">
-									<a href="Animes/Darwin's Game.html">Darwin's Game</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-4"
-									onclick="slideItemClick('Animes/Kobayashi-San Chi No Maid Dragon.html')">
-									<a href="Animes/Kobayashi-San Chi No Maid Dragon.html">Kobayashi-San Chi No Maid
-										Dragon</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-5" onclick="slideItemClick('Animes/Mini Dragon.html')">
-									<a href="Animes/Mini Dragon.html">Mini Dragon</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-6" onclick="slideItemClick('Animes/Nanatsu No Taizai.html')">
-									<a href="Animes/Nanatsu No Taizai.html">Nanatsu No Taizai</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-7" onclick="slideItemClick('Animes/No Game No Life.html')">
-									<a href="Animes/No Game No Life.html">No Game No Life</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-8" onclick="slideItemClick('Animes/Shokugeki No Souma.html')">
-									<a href="Animes/Shokugeki No Souma.html">Shokugeki No Souma</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-9" onclick="slideItemClick('Animes/Tokyo Revengers.html')">
-									<a href="Animes/Tokyo Revengers.html">Tokyo Revengers</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="slide">
-								<div class="slide-img img-10" onclick="slideItemClick('Animes/Val X Love.html')">
-									<a href="Animes/Val X Love.html">Val X Love</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--<nav class="navigation-bar">
-		<img class="logo" src="logo.png">
-		<a href="#">Home</a>
-		<a href="#">Projects</a>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Get in Touch</a>
-	</nav>-->
-	<h1 style="color:lightyellow;">
-		Filmes e Séries
-	</h1>
-	<div class="scrollingArea">
-		<div>
-			<a href="Animes/5-Toubun No Hanayome.html" class="link">5-Toubun No Hanayome</a>
-		</div>
-		<div>
-			<a href="Animes/Absolute Duo.html" class="link">Absolute Duo</a>
-		</div>
-		<div>
-			<a href="Animes/Accel World.html" class="link">Accel World</a>
-		</div>
-		<div>
-			<a href="Animes/Akame Ga Kill.html" class="link">Akame Ga Kill</a>
-		</div>
-		<div>
-			<a href="Animes/Ano Hana.html" class="link">Ano Hana</a>
-		</div>
-		<div>
-			<a href="Animes/Ansatsu Kyoushitsu.html" class="link">Ansatsu Kyoushitsu</a>
-		</div>
-		<div>
-			<a href="Animes/Assassins Pride.html" class="link">Assassins Pride</a>
-		</div>
-		<div>
-			<a href="Animes/Astarotte No Omocha.html" class="link">Astarotte No Omocha</a>
-		</div>
-		<div>
-			<a href="Animes/Black Bullet.html" class="link">Black Bullet</a>
-		</div>
-		<div>
-			<a href="Animes/Black Rock Shooter.html" class="link">Black Rock Shooter</a>
-		</div>
-		<div>
-			<a href="Animes/Blend S.html" class="link">Blend S</a>
-		</div>
-		<div>
-			<a href="Animes/Boku No Hero.html" class="link">Boku No Hero</a>
-		</div>
-		<div>
-			<a href="Animes/Boku Wa Tomodachi Ga Sukunai.html" class="link">Boku Wa Tomodachi Ga Sukunai</a>
-		</div>
-		<div>
-			<a href="Animes/Chainsaw Man.html" class="link">Chainsaw Man</a>
-		</div>
-		<div>
-			<a href="Animes/Chrno Crusade.html" class="link">Chrno Crusade</a>
-		</div>
-		<div>
-			<a href="Animes/Classroom Crisis.html" class="link">Classroom Crisis</a>
-		</div>
-		<div>
-			<a href="Animes/Classroom Of The Elite.html" class="link">Classroom Of The Elite</a>
-		</div>
-		<div>
-			<a href="Animes/Conception.html" class="link">Conception</a>
-		</div>
-		<div>
-			<a href="Animes/Da Capo.html" class="link">Da Capo</a>
-		</div>
-		<div>
-			<a href="Animes/Darling In The Franxx.html" class="link">Darling In The Franxx</a>
-		</div>
-		<div>
-			<a href="Animes/Darwin's Game.html" class="link">Darwin's Game</a>
-		</div>
-		<div>
-			<a href="Animes/Digimon.html" class="link">Digimon</a>
-		</div>
-		<div>
-			<a href="Animes/Dog Days.html" class="link">Dog Days</a>
-		</div>
-		<div>
-			<a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki,
-				Atama No Ue</a>
-		</div>
-		<div>
-			<a href="Animes/Elfen Lied.html" class="link">Elfen Lied</a>
-		</div>
-		<div>
-			<a href="Animes/Eromanga Sensei.html" class="link">Eromanga Sensei</a>
-		</div>
-		<div>
-			<a href="Animes/Gabriel DropOut.html" class="link">Gabriel DropOut</a>
-		</div>
-		<div>
-			<a href="Animes/Gochuumon Wa Usagi Desuka.html" class="link">Gochuumon Wa Usagi Desuka</a>
-		</div>
-		<div>
-			<a href="Animes/Grisaia No Rakuen.html" class="link">Grisaia No Rakuen</a>
-		</div>
-		<div>
-			<a href="Animes/Guraburu!.html" class="link">Guraburu!</a>
-		</div>
-		<div>
-			<a href="Animes/Haikyuu!!.html" class="link">Haikyuu!!</a>
-		</div>
-		<div>
-			<a href="Animes/Haiyore! Nyaruko-San.html" class="link">Haiyore! Nyaruko-San</a>
-		</div>
-		<div>
-			<a href="Animes/Hidan No Aria.html" class="link">Hidan No Aria</a>
-		</div>
-		<div>
-			<a href="Animes/Hina Logi From Luck & Logic.html" class="link">Hina Logi From Luck & Logic</a>
-		</div>
-		<div>
-			<a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan
-				Shoujo No Dorei Majutsu</a>
-		</div>
-		<div>
-			<a href="Animes/Itsuka Tenma No Kuro Usagi.html" class="link">Itsuka Tenma No Kuro Usagi</a>
-		</div>
-		<div>
-			<a href="Animes/Jahy-Sama Wa Kujikenai!.html" class="link">Jahy-Sama Wa Kujikenai!</a>
-		</div>
-		<div>
-			<a href="Animes/Jin Tian Kai Shi Zuo Ming Xing.html" class="link">Jin Tian Kai Shi Zuo Ming Xing</a>
-		</div>
-		<div>
-			<a href="Animes/K-On.html" class="link">K-On</a>
-		</div>
-		<div>
-			<a href="Animes/Kageki Shoujo!!.html" class="link">Kageki Shoujo!!</a>
-		</div>
-		<div>
-			<a href="Animes/Kamisama No Inai Nichiyoubi.html" class="link">Kamisama No Inai Nichiyoubi</a>
-		</div>
-		<div>
-			<a href="Animes/Kannagi.html" class="link">Kannagi</a>
-		</div>
-		<div>
-			<a href="Animes/Katana Maidens - Mini Toji.html" class="link">Katana Maidens - Mini Toji</a>
-		</div>
-		<div>
-			<a href="Animes/Kekkai Sensen.html" class="link">Kekkai Sensen</a>
-		</div>
-		<div>
-			<a href="Animes/Kenja No Mago.html" class="link">Kenja No Mago</a>
-		</div>
-		<div>
-			<a href="Animes/Kill Me Baby.html" class="link">Kill Me Baby</a>
-		</div>
-		<div>
-			<a href="Animes/Kobayashi-San Chi No Maid Dragon.html" class="link">Kobayashi-San Chi No Maid Dragon</a>
-		</div>
-		<div>
-			<a href="Animes/Kono Minikuku Mo Utsukushii Sekai.html" class="link">Kono Minikuku Mo Utsukushii Sekai</a>
-		</div>
-		<div>
-			<a href="Animes/Konohana Kitan.html" class="link">Konohana Kitan</a>
-		</div>
-		<div>
-			<a href="Animes/Koro-sensei Quest!.html" class="link">Koro-sensei Quest!</a>
-		</div>
-		<div>
-			<a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no
-				Monogatari</a>
-		</div>
-		<div>
-			<a href="Animes/Love Live! Sunshine!!.html" class="link">Love Live! Sunshine!!</a>
-		</div>
-		<div>
-			<a href="Animes/Luck & Logic.html" class="link">Luck & Logic</a>
-		</div>
-		<div>
-			<a href="Animes/Lucky Star.html" class="link">Lucky Star</a>
-		</div>
-		<div>
-			<a href="Animes/Machine-Doll Wa Kizutsukanai.html" class="link">Machine-Doll Wa Kizutsukanai</a>
-		</div>
-		<div>
-			<a href="Animes/Maken-Ki.html" class="link">Maken-Ki</a>
-		</div>
-		<div>
-			<a href="Animes/Maoujou De Oyasumi.html" class="link">Maoujou De Oyasumi</a>
-		</div>
-		<div>
-			<a href="Animes/Mini Dragon.html" class="link">Mini Dragon</a>
-		</div>
-		<div>
-			<a href="Animes/Monochrome Factor.html" class="link">Monochrome Factor</a>
-		</div>
-		<div>
-			<a href="Animes/Musaigen No Phantom World.html" class="link">Musaigen No Phantom World</a>
-		</div>
-		<div>
-			<a href="Animes/Nanatsu No Taizai.html" class="link">Nanatsu No Taizai</a>
-		</div>
-		<div>
-			<a href="Animes/Nausicaä of the Valley of the Wind.html" class="link">Nausicaä of the Valley of the Wind</a>
-		</div>
-		<div>
-			<a href="Animes/No Game No Life.html" class="link">No Game No Life</a>
-		</div>
-		<div>
-			<a href="Animes/Non Non Biyori.html" class="link">Non Non Biyori</a>
-		</div>
-		<div>
-			<a href="Animes/One Piece.html" class="link">One Piece</a>
-		</div>
-		<div>
-			<a href="Animes/One Room.html" class="link">One Room</a>
-		</div>
-		<div>
-			<a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To
-				Osananajimi Ga Shuraba Sugiru</a>
-		</div>
-		<div>
-			<a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi
-				Ga, Gakuen Love Comedy</a>
-		</div>
-		<div>
-			<a href="Animes/Phantasy Star Online 2.html" class="link">Phantasy Star Online 2</a>
-		</div>
-		<div>
-			<a href="Animes/Rail Romanesque.html" class="link">Rail Romanesque</a>
-		</div>
-		<div>
-			<a href="Animes/Rental Magica.html" class="link">Rental Magica</a>
-		</div>
-		<div>
-			<a href="Animes/Rewrite.html" class="link">Rewrite</a>
-		</div>
-		<div>
-			<a href="Animes/Ryuuou No Oshigoto.html" class="link">Ryuuou No Oshigoto</a>
-		</div>
-		<div>
-			<a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu
-				Ga Chotto Okashiinda Ga</a>
-		</div>
-		<div>
-			<a href="Animes/Schwarzesmarken.html" class="link">Schwarzesmarken</a>
-		</div>
-		<div>
-			<a href="Animes/Seirei Tsukai No Blade Dance.html" class="link">Seirei Tsukai No Blade Dance</a>
-		</div>
-		<div>
-			<a href="Animes/Sentouin, Hakenshimasu!.html" class="link">Sentouin, Hakenshimasu!</a>
-		</div>
-		<div>
-			<a href="Animes/Seto No Hanayome.html" class="link">Seto No Hanayome</a>
-		</div>
-		<div>
-			<a href="Animes/Sewayaki Kitsune No Senko-San.html" class="link">Sewayaki Kitsune No Senko-San</a>
-		</div>
-		<div>
-			<a href="Animes/Shakugan No Shana.html" class="link">Shakugan No Shana</a>
-		</div>
-		<div>
-			<a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu
-				Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
-		</div>
-		<div>
-			<a href="Animes/Shokugeki No Souma.html" class="link">Shokugeki No Souma</a>
-		</div>
-		<div>
-			<a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html"
-				class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
-		</div>
-		<div>
-			<a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime
-				Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
-		</div>
-		<div>
-			<a href="Animes/Slow Start.html" class="link">Slow Start</a>
-		</div>
-		<div>
-			<a href="Animes/So Ra No Wo To.html" class="link">So Ra No Wo To</a>
-		</div>
-		<div>
-			<a href="Animes/Sumomomo Momomo - Chijo Saikyo No Yome.html" class="link">Sumomomo Momomo - Chijo Saikyo No
-				Yome</a>
-		</div>
-		<div>
-			<a href="Animes/Tantei Wa Mou, Shindeiru.html" class="link">Tantei Wa Mou, Shindeiru</a>
-		</div>
-		<div>
-			<a href="Animes/Tate No Yuusha No Nariagari.html" class="link">Tate No Yuusha No Nariagari</a>
-		</div>
-		<div>
-			<a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And
-				Possibility Control</a>
-		</div>
-		<div>
-			<a href="Animes/Toaru Kagaku No Railgun.html" class="link">Toaru Kagaku No Railgun</a>
-		</div>
-		<div>
-			<a href="Animes/Tokyo Revengers.html" class="link">Tokyo Revengers</a>
-		</div>
-		<div>
-			<a href="Animes/UQ Holder! Mahou Sensei Negima! 2.html" class="link">UQ Holder! Mahou Sensei Negima! 2</a>
-		</div>
-		<div>
-			<a href="Animes/Val X Love.html" class="link">Val X Love</a>
-		</div>
-		<div>
-			<a href="Animes/Watashi Ni Tenshi Ga Maiorita!.html" class="link">Watashi Ni Tenshi Ga Maiorita!</a>
-		</div>
-		<div>
-			<a href="Animes/Wo De Tian Jie Nu You.html" class="link">Wo De Tian Jie Nu You</a>
-		</div>
-		<div>
-			<a href="Animes/Wo Kai Dongwuyuan Naxie Nian.html" class="link">Wo Kai Dongwuyuan Naxie Nian</a>
-		</div>
-		<div>
-			<a href="Animes/Wonder Egg Priority.html" class="link">Wonder Egg Priority</a>
-		</div>
-		<div>
-			<a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No
-				Kishi</a>
-		</div>
-		<div id="Contact" class="footer" style="margin-top:20px;">
-			<div class="footer-content">
-				<h3>VKDev</h3>
-				<p>Note que o site está sob constantes atualizações, quaisquer problemas por favor me contate!
-				</p>
-				<h4 style="color:grey;font-family:opensans-b;">Tenha um bom dia!
-				</h4>
-				<ul class="socials">
-					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://github.com/ViiKDev" target="_blank"><i class="fa fa-github"></i></a></li>
-				</ul>
-			</div>
-			<div class="footer-bottom">
-				<p>copyright &copy;2022 ViiKDev. designed by <span>ViiKDev</span></p>
-			</div>
-		</div>
-		<a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
-	</div>
-	<script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
-	<script src="wwwroot/js/script.js"></script>
-	<script src="wwwroot/js/slider.js"></script>
+  <!-- <script language="javascript">
+     if (!document.cookie){
+        setCookie("cookie", "1", 365);
+        document.write("^<p style='display:none;'^>1^</p^>");
+     } else {
+        var cont = document.cookie;
+        var dividindo = cont.split("=");
+        //document.write(dividindo[1]);
+        var numero = parseInt(dividindo[1]);
+        var soma = numero + 1;
+        document.write("^<p style='display:none;'^>" + soma + "^</p^>");
+        setCookie("cookie", soma, 365);
+     }
+  </script> -->
+  <header class="p-3 text-bg-dark fixed-top">
+     <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+           <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none" style="/* margin-right:30px; */">
+              <img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
+           </a>
+           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a class="nav-link px-2 active">Início</a></li>
+              <li><a onclick="randomSite();" class="nav-link px-2 text-white">Sorte</a></li>
+              <li><a href="#Contact" class="nav-link px-2 text-white">Contato</a></li>
+              <li><a onclick="showNews();" class="nav-link px-2 text-white">Notícias</a></li>
+           </ul>
+           <div class="searchDiv">
+              <div class="icone">
+                 <button class="botao" onclick="mostrarCaixa()"><i class="fa fa-search"></i></button>
+              </div>
+              <div class="barra">
+                 <input type="search" spellcheck="false" placehoder="Buscar Anime..." class="caixa-texto" id="pesquisa" onblur="mostrarCaixa()" />
+              </div>
+           </div>
+           <!-- <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+           </div> -->
+        </div>
+     </div>
+  </header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+     <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     </div>
+     <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+           <img src="wwwroot/img/carousel/carousel1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+           <img src="wwwroot/img/carousel/carousel2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+           <a onclick="copyToClip(pixKey)" style="cursor:pointer"><img src="wwwroot/img/carousel/carousel3.jpg" class="d-block w-100" alt="..."></a>
+        </div>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+     </button>
+     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+     </button>
+  </div>
+  <section id="slider">
+     <div class="container-slider">
+        <div class="subcontainer-slider">
+           <div class="slide-wrapper">
+              <div class="controller">
+                 <div>
+                    <h2>Animes Recomendados</h2>
+                 </div>
+                 <div id="controls">
+                    <button class="voltar"><i class="fas fa-angle-left"></i></button>
+                    <button class="avancar"><i class="fas fa-angle-right"></i></button>
+                 </div>
+              </div>
+              <div class="my-slider">
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-1" onclick="slideItemClick('Animes/Akame Ga Kill.html')">
+                          <a href="Animes/Akame Ga Kill.html">Akame Ga Kill</a>
+                       </div>
+                       <!-- <br>
+                       <div>
+                          <h3>California</h3>
+                          <p>Los Angeles</p>
+                       </div> -->
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-2" onclick="slideItemClick('Animes/Boku No Hero.html')">
+                          <a href="Animes/Boku No Hero.html">Boku No Hero</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-3" onclick="slideItemClick('Animes/Darwin\'s Game.html')">
+                          <a href="Animes/Darwin's Game.html">Darwin's Game</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-4" onclick="slideItemClick('Animes/Kobayashi-San Chi No Maid Dragon.html')">
+                          <a href="Animes/Kobayashi-San Chi No Maid Dragon.html">Kobayashi-San Chi No Maid
+                             Dragon</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-5" onclick="slideItemClick('Animes/Mini Dragon.html')">
+                          <a href="Animes/Mini Dragon.html">Mini Dragon</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-6" onclick="slideItemClick('Animes/Nanatsu No Taizai.html')">
+                          <a href="Animes/Nanatsu No Taizai.html">Nanatsu No Taizai</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-7" onclick="slideItemClick('Animes/No Game No Life.html')">
+                          <a href="Animes/No Game No Life.html">No Game No Life</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-8" onclick="slideItemClick('Animes/Shokugeki No Souma.html')">
+                          <a href="Animes/Shokugeki No Souma.html">Shokugeki No Souma</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-9" onclick="slideItemClick('Animes/Tokyo Revengers.html')">
+                          <a href="Animes/Tokyo Revengers.html">Tokyo Revengers</a>
+                       </div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="slide">
+                       <div class="slide-img img-10" onclick="slideItemClick('Animes/Val X Love.html')">
+                          <a href="Animes/Val X Love.html">Val X Love</a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </section>
+  <!--<nav class="navigation-bar">
+     <img class="logo" src="logo.png">
+     <a href="#">Home</a>
+     <a href="#">Projects</a>
+     <a href="#">About</a>
+     <a href="#">Services</a>
+     <a href="#">Get in Touch</a>
+  </nav>-->
+  <h1 style="color:lightyellow;">
+     Todos os Animes
+   </h1>
+   <div class="scrollingArea">
+<div>
+   <a href="Animes/5-Toubun No Hanayome.html" class="link">5-Toubun No Hanayome</a>
+</div>
+<div>
+   <a href="Animes/Absolute Duo.html" class="link">Absolute Duo</a>
+</div>
+<div>
+   <a href="Animes/Accel World.html" class="link">Accel World</a>
+</div>
+<div>
+   <a href="Animes/Akame Ga Kill.html" class="link">Akame Ga Kill</a>
+</div>
+<div>
+   <a href="Animes/Ano Hana.html" class="link">Ano Hana</a>
+</div>
+<div>
+   <a href="Animes/Ansatsu Kyoushitsu.html" class="link">Ansatsu Kyoushitsu</a>
+</div>
+<div>
+   <a href="Animes/Assassins Pride.html" class="link">Assassins Pride</a>
+</div>
+<div>
+   <a href="Animes/Astarotte No Omocha.html" class="link">Astarotte No Omocha</a>
+</div>
+<div>
+   <a href="Animes/Black Bullet.html" class="link">Black Bullet</a>
+</div>
+<div>
+   <a href="Animes/Black Rock Shooter.html" class="link">Black Rock Shooter</a>
+</div>
+<div>
+   <a href="Animes/Blend S.html" class="link">Blend S</a>
+</div>
+<div>
+   <a href="Animes/Boku No Hero.html" class="link">Boku No Hero</a>
+</div>
+<div>
+   <a href="Animes/Boku Wa Tomodachi Ga Sukunai.html" class="link">Boku Wa Tomodachi Ga Sukunai</a>
+</div>
+<div>
+   <a href="Animes/Chainsaw Man.html" class="link">Chainsaw Man</a>
+</div>
+<div>
+   <a href="Animes/Chrno Crusade.html" class="link">Chrno Crusade</a>
+</div>
+<div>
+   <a href="Animes/Classroom Crisis.html" class="link">Classroom Crisis</a>
+</div>
+<div>
+   <a href="Animes/Classroom Of The Elite.html" class="link">Classroom Of The Elite</a>
+</div>
+<div>
+   <a href="Animes/Conception.html" class="link">Conception</a>
+</div>
+<div>
+   <a href="Animes/Da Capo.html" class="link">Da Capo</a>
+</div>
+<div>
+   <a href="Animes/Darling In The Franxx.html" class="link">Darling In The Franxx</a>
+</div>
+<div>
+   <a href="Animes/Darwin's Game.html" class="link">Darwin's Game</a>
+</div>
+<div>
+   <a href="Animes/Digimon.html" class="link">Digimon</a>
+</div>
+<div>
+   <a href="Animes/Dog Days.html" class="link">Dog Days</a>
+</div>
+<div>
+   <a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki, Atama No Ue</a>
+</div>
+<div>
+   <a href="Animes/Elfen Lied.html" class="link">Elfen Lied</a>
+</div>
+<div>
+   <a href="Animes/Eromanga Sensei.html" class="link">Eromanga Sensei</a>
+</div>
+<div>
+   <a href="Animes/Gabriel DropOut.html" class="link">Gabriel DropOut</a>
+</div>
+<div>
+   <a href="Animes/Gochuumon Wa Usagi Desuka.html" class="link">Gochuumon Wa Usagi Desuka</a>
+</div>
+<div>
+   <a href="Animes/Grisaia No Rakuen.html" class="link">Grisaia No Rakuen</a>
+</div>
+<div>
+   <a href="Animes/Guraburu!.html" class="link">Guraburu!</a>
+</div>
+<div>
+   <a href="Animes/Haikyuu!!.html" class="link">Haikyuu!!</a>
+</div>
+<div>
+   <a href="Animes/Haiyore! Nyaruko-San.html" class="link">Haiyore! Nyaruko-San</a>
+</div>
+<div>
+   <a href="Animes/Hidan No Aria.html" class="link">Hidan No Aria</a>
+</div>
+<div>
+   <a href="Animes/Hina Logi From Luck & Logic.html" class="link">Hina Logi From Luck & Logic</a>
+</div>
+<div>
+   <a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan Shoujo No Dorei Majutsu</a>
+</div>
+<div>
+   <a href="Animes/Itsuka Tenma No Kuro Usagi.html" class="link">Itsuka Tenma No Kuro Usagi</a>
+</div>
+<div>
+   <a href="Animes/Jahy-Sama Wa Kujikenai!.html" class="link">Jahy-Sama Wa Kujikenai!</a>
+</div>
+<div>
+   <a href="Animes/Jin Tian Kai Shi Zuo Ming Xing.html" class="link">Jin Tian Kai Shi Zuo Ming Xing</a>
+</div>
+<div>
+   <a href="Animes/K-On.html" class="link">K-On</a>
+</div>
+<div>
+   <a href="Animes/Kageki Shoujo!!.html" class="link">Kageki Shoujo!!</a>
+</div>
+<div>
+   <a href="Animes/Kamisama No Inai Nichiyoubi.html" class="link">Kamisama No Inai Nichiyoubi</a>
+</div>
+<div>
+   <a href="Animes/Kannagi.html" class="link">Kannagi</a>
+</div>
+<div>
+   <a href="Animes/Katana Maidens - Mini Toji.html" class="link">Katana Maidens - Mini Toji</a>
+</div>
+<div>
+   <a href="Animes/Kekkai Sensen.html" class="link">Kekkai Sensen</a>
+</div>
+<div>
+   <a href="Animes/Kenja No Mago.html" class="link">Kenja No Mago</a>
+</div>
+<div>
+   <a href="Animes/Kill La Kill.html" class="link">Kill La Kill</a>
+</div>
+<div>
+   <a href="Animes/Kill Me Baby.html" class="link">Kill Me Baby</a>
+</div>
+<div>
+   <a href="Animes/Kobayashi-San Chi No Maid Dragon.html" class="link">Kobayashi-San Chi No Maid Dragon</a>
+</div>
+<div>
+   <a href="Animes/Kono Minikuku Mo Utsukushii Sekai.html" class="link">Kono Minikuku Mo Utsukushii Sekai</a>
+</div>
+<div>
+   <a href="Animes/Konohana Kitan.html" class="link">Konohana Kitan</a>
+</div>
+<div>
+   <a href="Animes/Koro-sensei Quest!.html" class="link">Koro-sensei Quest!</a>
+</div>
+<div>
+   <a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no Monogatari</a>
+</div>
+<div>
+   <a href="Animes/Love Live! Sunshine!!.html" class="link">Love Live! Sunshine!!</a>
+</div>
+<div>
+   <a href="Animes/Luck & Logic.html" class="link">Luck & Logic</a>
+</div>
+<div>
+   <a href="Animes/Lucky Star.html" class="link">Lucky Star</a>
+</div>
+<div>
+   <a href="Animes/Machine-Doll Wa Kizutsukanai.html" class="link">Machine-Doll Wa Kizutsukanai</a>
+</div>
+<div>
+   <a href="Animes/Maken-Ki.html" class="link">Maken-Ki</a>
+</div>
+<div>
+   <a href="Animes/Maoujou De Oyasumi.html" class="link">Maoujou De Oyasumi</a>
+</div>
+<div>
+   <a href="Animes/Mini Dragon.html" class="link">Mini Dragon</a>
+</div>
+<div>
+   <a href="Animes/Monochrome Factor.html" class="link">Monochrome Factor</a>
+</div>
+<div>
+   <a href="Animes/Musaigen No Phantom World.html" class="link">Musaigen No Phantom World</a>
+</div>
+<div>
+   <a href="Animes/Nanatsu No Taizai.html" class="link">Nanatsu No Taizai</a>
+</div>
+<div>
+   <a href="Animes/Nausicaä of the Valley of the Wind.html" class="link">Nausicaä of the Valley of the Wind</a>
+</div>
+<div>
+   <a href="Animes/No Game No Life.html" class="link">No Game No Life</a>
+</div>
+<div>
+   <a href="Animes/No Guns Life.html" class="link">No Guns Life</a>
+</div>
+<div>
+   <a href="Animes/Non Non Biyori.html" class="link">Non Non Biyori</a>
+</div>
+<div>
+   <a href="Animes/One Piece.html" class="link">One Piece</a>
+</div>
+<div>
+   <a href="Animes/One Room.html" class="link">One Room</a>
+</div>
+<div>
+   <a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To Osananajimi Ga Shuraba Sugiru</a>
+</div>
+<div>
+   <a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi Ga, Gakuen Love Comedy</a>
+</div>
+<div>
+   <a href="Animes/Phantasy Star Online 2.html" class="link">Phantasy Star Online 2</a>
+</div>
+<div>
+   <a href="Animes/Rail Romanesque.html" class="link">Rail Romanesque</a>
+</div>
+<div>
+   <a href="Animes/Rental Magica.html" class="link">Rental Magica</a>
+</div>
+<div>
+   <a href="Animes/Rewrite.html" class="link">Rewrite</a>
+</div>
+<div>
+   <a href="Animes/Ryuuou No Oshigoto.html" class="link">Ryuuou No Oshigoto</a>
+</div>
+<div>
+   <a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga</a>
+</div>
+<div>
+   <a href="Animes/Schwarzesmarken.html" class="link">Schwarzesmarken</a>
+</div>
+<div>
+   <a href="Animes/Seirei Tsukai No Blade Dance.html" class="link">Seirei Tsukai No Blade Dance</a>
+</div>
+<div>
+   <a href="Animes/Sentouin, Hakenshimasu!.html" class="link">Sentouin, Hakenshimasu!</a>
+</div>
+<div>
+   <a href="Animes/Seto No Hanayome.html" class="link">Seto No Hanayome</a>
+</div>
+<div>
+   <a href="Animes/Sewayaki Kitsune No Senko-San.html" class="link">Sewayaki Kitsune No Senko-San</a>
+</div>
+<div>
+   <a href="Animes/Shakugan No Shana.html" class="link">Shakugan No Shana</a>
+</div>
+<div>
+   <a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
+</div>
+<div>
+   <a href="Animes/Shokugeki No Souma.html" class="link">Shokugeki No Souma</a>
+</div>
+<div>
+   <a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html" class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
+</div>
+<div>
+   <a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
+</div>
+<div>
+   <a href="Animes/Slow Start.html" class="link">Slow Start</a>
+</div>
+<div>
+   <a href="Animes/So Ra No Wo To.html" class="link">So Ra No Wo To</a>
+</div>
+<div>
+   <a href="Animes/Sumomomo Momomo - Chijo Saikyo No Yome.html" class="link">Sumomomo Momomo - Chijo Saikyo No Yome</a>
+</div>
+<div>
+   <a href="Animes/Tantei Wa Mou, Shindeiru.html" class="link">Tantei Wa Mou, Shindeiru</a>
+</div>
+<div>
+   <a href="Animes/Tate No Yuusha No Nariagari.html" class="link">Tate No Yuusha No Nariagari</a>
+</div>
+<div>
+   <a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And Possibility Control</a>
+</div>
+<div>
+   <a href="Animes/Toaru Kagaku No Railgun.html" class="link">Toaru Kagaku No Railgun</a>
+</div>
+<div>
+   <a href="Animes/Tokyo Revengers.html" class="link">Tokyo Revengers</a>
+</div>
+<div>
+   <a href="Animes/UQ Holder! Mahou Sensei Negima! 2.html" class="link">UQ Holder! Mahou Sensei Negima! 2</a>
+</div>
+<div>
+   <a href="Animes/Val X Love.html" class="link">Val X Love</a>
+</div>
+<div>
+   <a href="Animes/Watashi Ni Tenshi Ga Maiorita!.html" class="link">Watashi Ni Tenshi Ga Maiorita!</a>
+</div>
+<div>
+   <a href="Animes/Wo De Tian Jie Nu You.html" class="link">Wo De Tian Jie Nu You</a>
+</div>
+<div>
+   <a href="Animes/Wo Kai Dongwuyuan Naxie Nian.html" class="link">Wo Kai Dongwuyuan Naxie Nian</a>
+</div>
+<div>
+   <a href="Animes/Wonder Egg Priority.html" class="link">Wonder Egg Priority</a>
+</div>
+<div>
+   <a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No Kishi</a>
+</div>
+      <div id="Contact" class="footer" style="margin-top:20px;">
+         <div class="footer-content">
+            <h3>VKDev</h3>
+            <p>Note que o site está sob constantes atualizações, quaisquer problemas por favor me contate!
+            </p>
+            <h4 style="color:grey;font-family:opensans-b;">Tenha um bom dia!
+            </h4>
+            <ul class="socials">
+               <li><a href="https://br.linkedin.com/in/viktor-bonazza-charlanti-244890212" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+               <li><a href="https://www.instagram.com/viik_bonazza/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="https://github.com/ViiKDev" target="_blank"><i class="fa fa-github"></i></a></li>
+            </ul>
+         </div>
+         <div class="footer-bottom">
+            <p>copyright &copy;2022 ViiKDev. designed by <span>ViiKDev</span></p>
+         </div>
+      </div>
+      <a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+   </div>
+   <script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="wwwroot/js/script.js"></script>
+   <script src="wwwroot/js/slider.js"></script>
+   <script src="wwwroot/js/news.js"></script>
 </body>
-
 </html>

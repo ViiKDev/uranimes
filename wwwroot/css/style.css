@@ -369,6 +369,8 @@ NAVBAR OLD*/
 
 @media (max-width: 991px) {
     #carouselExampleIndicators {
+	margin: 90px 7.5% 20px 7.5%;
+	width:85%;
         margin-top: 160px !important;
     }
 	.carousel-indicators button {
@@ -379,7 +381,9 @@ NAVBAR OLD*/
 
 @media (max-width: 335px) {
     #carouselExampleIndicators {
+	margin: 90px 5% 20px 5%;
         margin-top: 220px !important;
+	width: 90%;
     }
 	.carousel-indicators button {
 		width:4px !important;
@@ -389,7 +393,9 @@ NAVBAR OLD*/
 
 @media (max-width: 233px) {
     #carouselExampleIndicators {
+	margin: 90px 2.5% 20px 2.5%;
         margin-top: 240px !important;
+	width: 95%;
     }
 	.carousel-indicators button {
 		width:3px !important;
@@ -398,3 +404,7 @@ NAVBAR OLD*/
 }
 
 /* Custom Media Queries */
+
+.nav-link {
+	cursor:pointer;
+}

@@ -1,5 +1,9 @@
-var aberto = 0;
+﻿var aberto = 0;
 var pesquisa = document.getElementById("pesquisa");
+var pixKey = 'ffc1ec44-10d8-4742-a770-2abb42142827';
+var username = getCookie('username');
+var nameInputed = getCookie('nameInputed');
+var showAlert = getCookie('showAlert');
 const button = document.querySelector('button');
 
 function mostrarCaixa() {
@@ -56,4 +60,43 @@ function setCookie(nome, valor, dias) {
     dias = new Date(diasms);
     expires = dias.toGMTString();
     document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires;
-} 
+}
+
+function copyToClip(value) {
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(value);
+
+    // Alert the copied text
+    alert("Subarashii, o texto foi copiado!");
+}
+
+function showNews() {
+    var message = "Okaeri";
+    if (username != '') {
+        message = message + ", " + username;
+    }
+    alert(message + "!\n" + news);
+}
+
+window.onload = function () {
+    // alert("Bem-vindo!\nAproveite os recém-chegados animes: Haikyuu, Chainsaw Man e One Piece!!")
+    // alert("Bem-vindo!\n" + news);
+    if (username == '' || showAlert == false) {
+        if (nameInputed == '') {
+            if (confirm("Você poderia informar seu nome?\nSomente para deixar o site mais amigável!") == true) {
+                username = prompt("Ótimo!\nPor favor insira seu nome:", "Harry Potter");
+                nameInputed = true;
+                setCookie('username', username, 365);
+                setCookie('nameInputed', nameInputed, 365);
+                alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+            } else {
+                nameInputed = false;
+                setCookie('nameInputed', nameInputed, 365);
+            }
+        }
+    }
+};
+// window.onbeforeunload = function () {
+//     alert("Obrigado pela preferência!");
+// };
