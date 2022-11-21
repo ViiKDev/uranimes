@@ -4,6 +4,10 @@ var pixKey = 'ffc1ec44-10d8-4742-a770-2abb42142827';
 var username = getCookie('username');
 var nameInputed = getCookie('nameInputed');
 var showAlert = getCookie('showAlert');
+var watchList = [];
+if ($.cookie('watchList') != undefined) {
+    watchList = JSON.parse($.cookie('watchList'));
+}
 const button = document.querySelector('button');
 
 function mostrarCaixa() {
@@ -79,6 +83,12 @@ function showNews() {
     alert(message + "!\n" + news);
 }
 
+// function prepend(value, array) {
+//     var newArray = array.slice();
+//     newArray.unshift(value);
+//     return newArray;
+// }
+
 window.onload = function () {
     // alert("Bem-vindo!\nAproveite os recém-chegados animes: Haikyuu, Chainsaw Man e One Piece!!")
     // alert("Bem-vindo!\n" + news);
@@ -86,17 +96,52 @@ window.onload = function () {
         if (nameInputed == '') {
             if (confirm("Você poderia informar seu nome?\nSomente para deixar o site mais amigável!") == true) {
                 username = prompt("Ótimo!\nPor favor insira seu nome:", "Harry Potter");
-                nameInputed = true;
-                setCookie('username', username, 365);
-                setCookie('nameInputed', nameInputed, 365);
-                alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+                if (username != null) {
+                    nameInputed = true;
+                    setCookie('username', username, 365);
+                    setCookie('nameInputed', nameInputed, 365);
+                    alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+                } else {
+                    nameInputed = false;
+                    setCookie('nameInputed', nameInputed, 365);
+                }
             } else {
                 nameInputed = false;
                 setCookie('nameInputed', nameInputed, 365);
             }
         }
     }
+    if (watchList != '') {
+        if (username) {
+            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo Como " + username + "</h1>");
+        } else {
+            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo</h1>");
+        }
+        for (let i = 0; i < watchList.length; i++) {
+            $("#keepWatching").append("<div><a href='" + watchList[i][0] + "' class='link'>" + watchList[i][1] + "</a></div>");
+        }
+    }
 };
 // window.onbeforeunload = function () {
 //     alert("Obrigado pela preferência!");
 // };
+
+$(".link").click(function () {
+    if (watchList != '') {
+        for (let i = 0; i < watchList.length; i++) {
+            if (watchList[i].includes($(this).text()) == true) {
+                watchList.splice(i, 1);
+                watchList.unshift([$(this).attr('href'), $(this).text()]);
+                break;
+            } else {
+                if (i == watchList.length - 1) {
+                    watchList.unshift([$(this).attr('href'), $(this).text()]);
+                    break;
+                }
+            }
+        }
+    } else {
+        watchList.unshift([$(this).attr('href'), $(this).text()]);
+    }
+    $.cookie('watchList', JSON.stringify(watchList));
+});

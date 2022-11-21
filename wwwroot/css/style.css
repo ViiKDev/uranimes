@@ -2,6 +2,15 @@
     --caixa-disp: none;
     --tamanho-caixa: 0;
     --color-search: white;
+    --color-nav: rgba(33, 37, 41, .8);
+    --color-nav-texts: white;
+    --color-bg: rgba(0, 0, 0, 0.9);
+    --color-texts: lightyellow;
+    --color-links: lightblue;
+    --color-buttons: white;
+    /* --color-link-hover: ;
+    --color-link-focus: ;
+    --color-link-active: ; */
 }
 
 * {
@@ -14,33 +23,33 @@ html {
 }
 
 body {
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: var(--color-bg);
     /* background: url(../img/bg.jpg) fixed center center;
 	background-size: cover;
 	overflow: hidden; */
 }
 
 .link {
-	text-decoration: none;
-	color: lightblue;
-	font-size: 15px;
-	margin-left: 40px;
-	font-family: ubuntu-r;
-	transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: var(--color-links);
+    font-size: 15px;
+    margin-left: 40px;
+    font-family: ubuntu-r;
+    transition: all 0.2s ease-in-out;
 }
 
 .link:hover {
-	margin-left: 45px;
-	color: purple;
-	font-size: 17px;
+    margin-left: 45px;
+    color: purple;
+    font-size: 17px;
 }
 
 .link:focus {
-	color: rgb(185, 64, 215);
+    color: rgb(185, 64, 215);
 }
 
 .link:visited {
-	color:crimson;
+    color: crimson;
 }
 
 /*body:not(#home) .link {
@@ -169,7 +178,7 @@ body {
 
 .socials a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-buttons);
 }
 
 .socials a i {
@@ -215,20 +224,20 @@ body {
     text-decoration: none;
     line-height: 40px;
     text-align: center;
-    color: white;
+    color: var(--color-buttons);
     font-size: 20px;
     opacity: 0.6;
     background-color: grey;
 }
 
 .back-to-top:hover {
-    color: white;
+    color: var(--color-buttons);
 }
 
-h1.animeTitle {
+h1 {
     padding: 10px 10px;
     font-family: kanit-r;
-    font-weight: normal;
+    color: var(--color-texts);
 }
 
 /*NAVBAR OLD
@@ -265,6 +274,32 @@ h1.animeTitle {
 }
 
 NAVBAR OLD*/
+
+.nav-themed {
+    color: var(--color-nav-texts);
+    background-color: var(--color-nav);
+}
+
+.active {
+    color: rgb(108, 117, 125);
+}
+
+.active:hover {
+    color: rgb(108, 117, 125);
+}
+
+.active:focus {
+    color: rgb(108, 117, 125);
+}
+
+.nav-link {
+    margin: 0px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:not(.active):hover {
+    opacity: 0.6;
+}
 
 .searchDiv {
     width: 300px;
@@ -342,69 +377,80 @@ NAVBAR OLD*/
 }
 
 .carousel-indicators {
-	margin-bottom:1%;
+    margin-bottom: 1%;
 }
 
 .carousel-indicators button {
-	border-radius: 100%;
-	background-color: rgba(255, 255, 255, 0) !important;
-	outline: 1px solid white;
-	border: 2px solid transparent !important;
-	width: 6px !important;
-	height: 6px !important;
-	transition: all 0.3s ease-in-out;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    outline: 1px solid var(--color-buttons);
+    border: 2px solid transparent !important;
+    width: 6px !important;
+    height: 6px !important;
+    transition: all 0.3s ease-in-out;
 }
 
+/* .carousel-indicators button:hover {
+    background-color: var(--color-buttons);
+} */
+
 .carousel-indicators button.active {
-	background-color: white !important;
+    background-color: var(--color-buttons) !important;
 }
 
 #carouselExampleIndicators {
-	width: 70%;
-	margin: 90px 15% 20px 15%;
-	border: 2px solid rgb(33, 37, 41);
+    width: 70%;
+    margin: 90px 15% 20px 15%;
+    border: 2px solid rgb(33, 37, 41);
 }
 
 /* Custom Media Queries */
 
 @media (max-width: 991px) {
     #carouselExampleIndicators {
-	margin: 90px 7.5% 20px 7.5%;
-	width:85%;
+        margin: 90px 7.5% 20px 7.5%;
+        width: 85%;
         margin-top: 160px !important;
     }
-	.carousel-indicators button {
-		width:5px !important;
-		height:5px !important;
-	}
+
+    .carousel-indicators button {
+        width: 5px !important;
+        height: 5px !important;
+    }
 }
 
 @media (max-width: 335px) {
     #carouselExampleIndicators {
-	margin: 90px 5% 20px 5%;
+        margin: 90px 5% 20px 5%;
         margin-top: 220px !important;
-	width: 90%;
+        width: 90%;
     }
-	.carousel-indicators button {
-		width:4px !important;
-		height:4px !important;
-	}
+
+    .carousel-indicators button {
+        width: 4px !important;
+        height: 4px !important;
+    }
 }
 
 @media (max-width: 233px) {
     #carouselExampleIndicators {
-	margin: 90px 2.5% 20px 2.5%;
+        margin: 90px 2.5% 20px 2.5%;
         margin-top: 240px !important;
-	width: 95%;
+        width: 95%;
     }
-	.carousel-indicators button {
-		width:3px !important;
-		height:3px !important;
-	}
+
+    .carousel-indicators button {
+        width: 3px !important;
+        height: 3px !important;
+    }
 }
 
 /* Custom Media Queries */
 
 .nav-link {
-	cursor:pointer;
+    cursor: pointer;
+}
+
+.slide .link {
+    margin: 0;
 }
