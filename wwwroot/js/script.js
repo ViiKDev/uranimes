@@ -123,6 +123,8 @@ window.onload = function () {
     }
 };
 
+window.location.reload(true)
+
 $(window).on('popstate',function(event) {
     alert("location: " + document.location);
 });
