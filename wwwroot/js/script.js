@@ -122,6 +122,20 @@ window.onload = function () {
         }
     }
 };
+
+window.onpopstate = function () {
+	if (watchList != '') {
+        if (username) {
+            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo Como " + username + "</h1>");
+        } else {
+            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo</h1>");
+        }
+        for (let i = 0; i < watchList.length; i++) {
+            $("#keepWatching").append("<div><a href='" + watchList[i][0] + "' class='link'>" + watchList[i][1] + "</a></div>");
+        }
+    }
+}
+
 // window.onbeforeunload = function () {
 //     alert("Obrigado pela preferência!");
 // };
