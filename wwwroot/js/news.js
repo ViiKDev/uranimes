@@ -1,1 +1,1 @@
-var news="Aproveite o recém-chegado anime: No Guns Life";
+﻿var news="Aproveite o recém-chegado anime: Dungeon ni Deai";
