@@ -8,7 +8,7 @@ data = data.sort((a, b) => {
     }
 });
 
-console.log(data)
+// console.log(data)
 
 for (let i = 0; i < data.length; i++) {
     $("#main").append("<div><img src='" + data[i].img + "' alt='" + data[i].name + " Poster'><a href='" + data[i].path + "' class='link' title='" + animes[i].name + "'>" + animes[i].name + "</a></div>");
