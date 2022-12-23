@@ -12,22 +12,22 @@ let slider = tns({
             items: 5,
             gutter: 20
         },
-        1280: {
+        1152: {
             "slideBy": 4,
             items: 4,
             gutter: 20
         },
-        1024: {
+        800: {
             "slideBy": 3,
             items: 3,
             gutter: 20
         },
-        768: {
+        540: {
             "slideBy": 2,
             items: 2,
             gutter: 20
         },
-        480: {
+        420: {
             "slideBy": 1,
             items: 1
         },

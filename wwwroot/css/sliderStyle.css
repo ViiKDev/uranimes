@@ -122,4 +122,13 @@
     }
 }
 
+.slide {
+    display: flex;
+    justify-content: center;
+}
+
+/* @media (min-width:350px) {
+    @media (max-width:539px) {}
+} */
+
 /* Slides Css */

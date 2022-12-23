@@ -33,15 +33,15 @@ body {
     text-decoration: none;
     color: var(--color-links);
     font-size: 15px;
-    margin-left: 40px;
+    margin-left: 15px;
     font-family: ubuntu-r;
     transition: all 0.2s ease-in-out;
 }
 
 .link:hover {
-    margin-left: 45px;
+    /* margin-left: 45px; */
     color: purple;
-    font-size: 17px;
+    /* font-size: 17px; */
 }
 
 .link:focus {
@@ -339,6 +339,10 @@ NAVBAR OLD*/
     transition: all 0.3s ease-in-out;
 }
 
+.barra input {
+    outline: none;
+}
+
 .barra:focus-within {
     padding-left: 5px;
     width: 100%
@@ -419,10 +423,49 @@ NAVBAR OLD*/
     }
 }
 
+@media (max-width: 767px) {
+    #carouselExampleIndicators {
+        margin: 90px 7.5% 20px 7.5%;
+        width: 85%;
+        margin-top: 169px !important;
+    }
+
+    .carousel-indicators button {
+        width: 5px !important;
+        height: 5px !important;
+    }
+}
+
+@media (max-width: 428px) {
+    #carouselExampleIndicators {
+        margin: 90px 7.5% 20px 7.5%;
+        width: 85%;
+        margin-top: 208px !important;
+    }
+
+    .carousel-indicators button {
+        width: 5px !important;
+        height: 5px !important;
+    }
+}
+
 @media (max-width: 335px) {
     #carouselExampleIndicators {
         margin: 90px 5% 20px 5%;
-        margin-top: 220px !important;
+        margin-top: 208px !important;
+        width: 90%;
+    }
+
+    .carousel-indicators button {
+        width: 4px !important;
+        height: 4px !important;
+    }
+}
+
+@media (max-width: 261px) {
+    #carouselExampleIndicators {
+        margin: 90px 5% 20px 5%;
+        margin-top: 248px !important;
         width: 90%;
     }
 
@@ -435,13 +478,26 @@ NAVBAR OLD*/
 @media (max-width: 233px) {
     #carouselExampleIndicators {
         margin: 90px 2.5% 20px 2.5%;
-        margin-top: 240px !important;
+        margin-top: 248px !important;
         width: 95%;
     }
 
     .carousel-indicators button {
         width: 3px !important;
         height: 3px !important;
+    }
+}
+
+@media (max-width: 223px) {
+    #carouselExampleIndicators {
+        margin: 90px 2.5% 20px 2.5%;
+        margin-top: 288px !important;
+        width: 95%;
+    }
+
+    .carousel-indicators button {
+        width: 2px !important;
+        height: 2px !important;
     }
 }
 
@@ -453,4 +509,60 @@ NAVBAR OLD*/
 
 .slide .link {
     margin: 0;
+}
+
+#main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 43%);
+    gap: 10px;
+}
+
+#main div {
+    width: 100%;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+}
+
+#main div img {
+    height: 125px;
+    width: 84px;
+}
+
+#main div a {
+    width: 40%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#main div a:hover {
+    width: 60%;
+}
+
+.w2ui-popup {
+    width: 300px !important;
+    height: 450px !important;
+    left: calc(50% - 150px) !important;
+    top: calc(50% - 225px) !important;
+    border: 0 !important;
+    background-color: #000 !important;
+    box-shadow: 0 0 50vw #383838 !important;
+}
+
+.w2ui-msg-body {
+    background-color: rgb(22, 22, 22) !important;
+}
+
+.w2ui-msg-title {
+    border-bottom: 0 !important;
+    background-image: linear-gradient(#787878, #000000) !important;
+    color: rgb(190, 190, 190) !important;
+    cursor: default !important;
+}
+
+.w2ui-centered img {
+    height: 375px;
+    width: 252px;
 }

@@ -5,6 +5,7 @@ var username = getCookie('username');
 var nameInputed = getCookie('nameInputed');
 var showAlert = getCookie('showAlert');
 var watchList = [];
+
 if ($.cookie('watchList') != undefined) {
     watchList = JSON.parse($.cookie('watchList'));
 }
@@ -123,30 +124,30 @@ window.onload = function () {
     }
 };
 
-window.addEventListener( "pageshow", function ( event ) {
-  var historyTraversal = event.persisted || 
-                         ( typeof window.performance != "undefined" && 
-                              window.performance.navigation.type === 2 );
-  if ( historyTraversal ) {
-    // Handle page restore.
-    window.location.reload();
-  }
+window.addEventListener("pageshow", function (event) {
+    var historyTraversal = event.persisted ||
+        (typeof window.performance != "undefined" &&
+            window.performance.navigation.type === 2);
+    if (historyTraversal) {
+        // Handle page restore.
+        window.location.reload();
+    }
 });
 
 // window.onbeforeunload = function () {
 //     alert("Obrigado pela preferência!");
 // };
 
-$(".link").click(function () {
+$("#main").on('click', '.link', function () {
     if (watchList != '') {
         for (let i = 0; i < watchList.length; i++) {
             if (watchList[i].includes($(this).text()) == true) {
                 watchList.splice(i, 1);
-                watchList.unshift([$(this).attr('href'), $(this).text()]);
+                watchList.unshift([$(this).attr('href'), $(this).text(), $(this).parent().find('img').attr('src')]);
                 break;
             } else {
                 if (i == watchList.length - 1) {
-                    watchList.unshift([$(this).attr('href'), $(this).text()]);
+                    watchList.unshift([$(this).attr('href'), $(this).text(), $(this).parent().find('img').attr('src')]);
                     break;
                 }
             }

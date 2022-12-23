@@ -12,6 +12,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="wwwroot/js/jquery.cookie-1.4.1.min.js"></script>
+   <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
    <!-- <script language="javascript"> 
      function setCookie(nome, valor, dias){ 
         diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
@@ -63,7 +65,7 @@
                   <button class="botao" onclick="mostrarCaixa()"><i class="fa fa-search"></i></button>
                </div>
                <div class="barra">
-                  <input type="search" spellcheck="false" placehoder="Buscar Anime..." class="caixa-texto" id="pesquisa" onblur="mostrarCaixa()" />
+                  <input type="search" spellcheck="false" placeholder="Buscar Anime..." class="caixa-texto" id="pesquisa" onblur="mostrarCaixa()" />
                </div>
             </div>
             <!-- <div class="text-end">
@@ -207,321 +209,7 @@
       Todos os Animes
    </h1>
    <div class="scrollingArea">
-      <div>
-         <a href="Animes/5-Toubun No Hanayome.html" class="link">5-Toubun No Hanayome</a>
-      </div>
-      <div>
-         <a href="Animes/Absolute Duo.html" class="link">Absolute Duo</a>
-      </div>
-      <div>
-         <a href="Animes/Accel World.html" class="link">Accel World</a>
-      </div>
-      <div>
-         <a href="Animes/Akame Ga Kill.html" class="link">Akame Ga Kill</a>
-      </div>
-      <div>
-         <a href="Animes/Ano Hana.html" class="link">Ano Hana</a>
-      </div>
-      <div>
-         <a href="Animes/Ansatsu Kyoushitsu.html" class="link">Ansatsu Kyoushitsu</a>
-      </div>
-      <div>
-         <a href="Animes/Assassins Pride.html" class="link">Assassins Pride</a>
-      </div>
-      <div>
-         <a href="Animes/Astarotte No Omocha.html" class="link">Astarotte No Omocha</a>
-      </div>
-      <div>
-         <a href="Animes/Black Bullet.html" class="link">Black Bullet</a>
-      </div>
-      <div>
-         <a href="Animes/Black Rock Shooter.html" class="link">Black Rock Shooter</a>
-      </div>
-      <div>
-         <a href="Animes/Blend S.html" class="link">Blend S</a>
-      </div>
-      <div>
-         <a href="Animes/Boku No Hero.html" class="link">Boku No Hero</a>
-      </div>
-      <div>
-         <a href="Animes/Boku Wa Tomodachi Ga Sukunai.html" class="link">Boku Wa Tomodachi Ga Sukunai</a>
-      </div>
-      <div>
-         <a href="Animes/Chainsaw Man.html" class="link">Chainsaw Man</a>
-      </div>
-      <div>
-         <a href="Animes/Chrno Crusade.html" class="link">Chrno Crusade</a>
-      </div>
-      <div>
-         <a href="Animes/Classroom Crisis.html" class="link">Classroom Crisis</a>
-      </div>
-      <div>
-         <a href="Animes/Classroom Of The Elite.html" class="link">Classroom Of The Elite</a>
-      </div>
-      <div>
-         <a href="Animes/Conception.html" class="link">Conception</a>
-      </div>
-      <div>
-         <a href="Animes/Da Capo.html" class="link">Da Capo</a>
-      </div>
-      <div>
-         <a href="Animes/Darling In The Franxx.html" class="link">Darling In The Franxx</a>
-      </div>
-      <div>
-         <a href="Animes/Darwin's Game.html" class="link">Darwin's Game</a>
-      </div>
-      <div>
-         <a href="Animes/Digimon.html" class="link">Digimon</a>
-      </div>
-      <div>
-         <a href="Animes/Dog Days.html" class="link">Dog Days</a>
-      </div>
-      <div>
-         <a href="Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html" class="link">Doukyonin Wa Hiza, Tokidoki, Atama No Ue</a>
-      </div>
-      <div>
-         <a href="Animes/Dr. Stone.html" class="link">Dr Stone</a>
-      </div>
-      <div>
-         <a href="Animes/Dungeon ni Deai o Motomeru no wa.html" class="link">Dungeon ni Deai o Motomeru no wa</a>
-      </div>
-      <div>
-         <a href="Animes/Elfen Lied.html" class="link">Elfen Lied</a>
-      </div>
-      <div>
-         <a href="Animes/Eromanga Sensei.html" class="link">Eromanga Sensei</a>
-      </div>
-      <div>
-         <a href="Animes/Gabriel DropOut.html" class="link">Gabriel DropOut</a>
-      </div>
-      <div>
-         <a href="Animes/Given.html" class="link">Given</a>
-      </div>
-      <div>
-         <a href="Animes/Gochuumon Wa Usagi Desuka.html" class="link">Gochuumon Wa Usagi Desuka</a>
-      </div>
-      <div>
-         <a href="Animes/Grisaia No Rakuen.html" class="link">Grisaia No Rakuen</a>
-      </div>
-      <div>
-         <a href="Animes/Guraburu!.html" class="link">Guraburu!</a>
-      </div>
-      <div>
-         <a href="Animes/Haikyuu!!.html" class="link">Haikyuu!!</a>
-      </div>
-      <div>
-         <a href="Animes/Haiyore! Nyaruko-San.html" class="link">Haiyore! Nyaruko-San</a>
-      </div>
-      <div>
-         <a href="Animes/Hidan No Aria.html" class="link">Hidan No Aria</a>
-      </div>
-      <div>
-         <a href="Animes/Hina Logi From Luck & Logic.html" class="link">Hina Logi From Luck & Logic</a>
-      </div>
-      <div>
-         <a href="Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html" class="link">Isekai Maou To Shoukan Shoujo No Dorei Majutsu</a>
-      </div>
-      <div>
-         <a href="Animes/Itsuka Tenma No Kuro Usagi.html" class="link">Itsuka Tenma No Kuro Usagi</a>
-      </div>
-      <div>
-         <a href="Animes/Jahy-Sama Wa Kujikenai!.html" class="link">Jahy-Sama Wa Kujikenai!</a>
-      </div>
-      <div>
-         <a href="Animes/Jin Tian Kai Shi Zuo Ming Xing.html" class="link">Jin Tian Kai Shi Zuo Ming Xing</a>
-      </div>
-      <div>
-         <a href="Animes/K-On.html" class="link">K-On</a>
-      </div>
-      <div>
-         <a href="Animes/Kageki Shoujo!!.html" class="link">Kageki Shoujo!!</a>
-      </div>
-      <div>
-         <a href="Animes/Kamisama No Inai Nichiyoubi.html" class="link">Kamisama No Inai Nichiyoubi</a>
-      </div>
-      <div>
-         <a href="Animes/Kannagi.html" class="link">Kannagi</a>
-      </div>
-      <div>
-         <a href="Animes/Katana Maidens - Mini Toji.html" class="link">Katana Maidens - Mini Toji</a>
-      </div>
-      <div>
-         <a href="Animes/Kekkai Sensen.html" class="link">Kekkai Sensen</a>
-      </div>
-      <div>
-         <a href="Animes/Kenja No Mago.html" class="link">Kenja No Mago</a>
-      </div>
-      <div>
-         <a href="Animes/Kill La Kill.html" class="link">Kill La Kill</a>
-      </div>
-      <div>
-         <a href="Animes/Kill Me Baby.html" class="link">Kill Me Baby</a>
-      </div>
-      <div>
-         <a href="Animes/Kobayashi-San Chi No Maid Dragon.html" class="link">Kobayashi-San Chi No Maid Dragon</a>
-      </div>
-      <div>
-         <a href="Animes/Kono Minikuku Mo Utsukushii Sekai.html" class="link">Kono Minikuku Mo Utsukushii Sekai</a>
-      </div>
-      <div>
-         <a href="Animes/Konohana Kitan.html" class="link">Konohana Kitan</a>
-      </div>
-      <div>
-         <a href="Animes/Koro-sensei Quest!.html" class="link">Koro-sensei Quest!</a>
-      </div>
-      <div>
-         <a href="Animes/Last Period Owarinaki Rasen no Monogatari.html" class="link">Last Period Owarinaki Rasen no Monogatari</a>
-      </div>
-      <div>
-         <a href="Animes/Love Live! Sunshine!!.html" class="link">Love Live! Sunshine!!</a>
-      </div>
-      <div>
-         <a href="Animes/Luck & Logic.html" class="link">Luck & Logic</a>
-      </div>
-      <div>
-         <a href="Animes/Lucky Star.html" class="link">Lucky Star</a>
-      </div>
-      <div>
-         <a href="Animes/Machine-Doll Wa Kizutsukanai.html" class="link">Machine-Doll Wa Kizutsukanai</a>
-      </div>
-      <div>
-         <a href="Animes/Maken-Ki.html" class="link">Maken-Ki</a>
-      </div>
-      <div>
-         <a href="Animes/Maoujou De Oyasumi.html" class="link">Maoujou De Oyasumi</a>
-      </div>
-      <div>
-         <a href="Animes/Mini Dragon.html" class="link">Mini Dragon</a>
-      </div>
-      <div>
-         <a href="Animes/Monochrome Factor.html" class="link">Monochrome Factor</a>
-      </div>
-      <div>
-         <a href="Animes/Musaigen No Phantom World.html" class="link">Musaigen No Phantom World</a>
-      </div>
-      <div>
-         <a href="Animes/Nanatsu No Taizai.html" class="link">Nanatsu No Taizai</a>
-      </div>
-      <div>
-         <a href="Animes/Nausicaä of the Valley of the Wind.html" class="link">Nausicaä of the Valley of the Wind</a>
-      </div>
-      <div>
-         <a href="Animes/No Game No Life.html" class="link">No Game No Life</a>
-      </div>
-      <div>
-         <a href="Animes/No Guns Life.html" class="link">No Guns Life</a>
-      </div>
-      <div>
-         <a href="Animes/Non Non Biyori.html" class="link">Non Non Biyori</a>
-      </div>
-      <div>
-         <a href="Animes/One Piece.html" class="link">One Piece</a>
-      </div>
-      <div>
-         <a href="Animes/One Room.html" class="link">One Room</a>
-      </div>
-      <div>
-         <a href="Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html" class="link">Ore No Kanojo To Osananajimi Ga Shuraba Sugiru</a>
-      </div>
-      <div>
-         <a href="Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html" class="link">Ore No Nounai Sentakushi Ga, Gakuen Love Comedy</a>
-      </div>
-      <div>
-         <a href="Animes/Phantasy Star Online 2.html" class="link">Phantasy Star Online 2</a>
-      </div>
-      <div>
-         <a href="Animes/Rail Romanesque.html" class="link">Rail Romanesque</a>
-      </div>
-      <div>
-         <a href="Animes/Rental Magica.html" class="link">Rental Magica</a>
-      </div>
-      <div>
-         <a href="Animes/Rewrite.html" class="link">Rewrite</a>
-      </div>
-      <div>
-         <a href="Animes/Ryuuou No Oshigoto.html" class="link">Ryuuou No Oshigoto</a>
-      </div>
-      <div>
-         <a href="Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html" class="link">Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga</a>
-      </div>
-      <div>
-         <a href="Animes/Schwarzesmarken.html" class="link">Schwarzesmarken</a>
-      </div>
-      <div>
-         <a href="Animes/Seirei Tsukai No Blade Dance.html" class="link">Seirei Tsukai No Blade Dance</a>
-      </div>
-      <div>
-         <a href="Animes/Sentouin, Hakenshimasu!.html" class="link">Sentouin, Hakenshimasu!</a>
-      </div>
-      <div>
-         <a href="Animes/Seto No Hanayome.html" class="link">Seto No Hanayome</a>
-      </div>
-      <div>
-         <a href="Animes/Sewayaki Kitsune No Senko-San.html" class="link">Sewayaki Kitsune No Senko-San</a>
-      </div>
-      <div>
-         <a href="Animes/Shakugan No Shana.html" class="link">Shakugan No Shana</a>
-      </div>
-      <div>
-         <a href="Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html" class="link">Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai</a>
-      </div>
-      <div>
-         <a href="Animes/Shokugeki No Souma.html" class="link">Shokugeki No Souma</a>
-      </div>
-      <div>
-         <a href="Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html" class="link">Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka</a>
-      </div>
-      <div>
-         <a href="Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html" class="link">Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita</a>
-      </div>
-      <div>
-         <a href="Animes/Slow Start.html" class="link">Slow Start</a>
-      </div>
-      <div>
-         <a href="Animes/So Ra No Wo To.html" class="link">So Ra No Wo To</a>
-      </div>
-      <div>
-         <a href="Animes/Sumomomo Momomo - Chijo Saikyo No Yome.html" class="link">Sumomomo Momomo - Chijo Saikyo No Yome</a>
-      </div>
-      <div>
-         <a href="Animes/Tantei Wa Mou, Shindeiru.html" class="link">Tantei Wa Mou, Shindeiru</a>
-      </div>
-      <div>
-         <a href="Animes/Tate No Yuusha No Nariagari.html" class="link">Tate No Yuusha No Nariagari</a>
-      </div>
-      <div>
-         <a href="Animes/The Money Of Soul And Possibility Control.html" class="link">The Money Of Soul And Possibility Control</a>
-      </div>
-      <div>
-         <a href="Animes/Toaru Kagaku No Railgun.html" class="link">Toaru Kagaku No Railgun</a>
-      </div>
-      <div>
-         <a href="Animes/Tokyo Revengers.html" class="link">Tokyo Revengers</a>
-      </div>
-      <div>
-         <a href="Animes/Toriko.html" class="link">Toriko</a>
-      </div>
-      <div>
-         <a href="Animes/UQ Holder! Mahou Sensei Negima! 2.html" class="link">UQ Holder! Mahou Sensei Negima! 2</a>
-      </div>
-      <div>
-         <a href="Animes/Val X Love.html" class="link">Val X Love</a>
-      </div>
-      <div>
-         <a href="Animes/Watashi Ni Tenshi Ga Maiorita!.html" class="link">Watashi Ni Tenshi Ga Maiorita!</a>
-      </div>
-      <div>
-         <a href="Animes/Wo De Tian Jie Nu You.html" class="link">Wo De Tian Jie Nu You</a>
-      </div>
-      <div>
-         <a href="Animes/Wo Kai Dongwuyuan Naxie Nian.html" class="link">Wo Kai Dongwuyuan Naxie Nian</a>
-      </div>
-      <div>
-         <a href="Animes/Wonder Egg Priority.html" class="link">Wonder Egg Priority</a>
-      </div>
-      <div>
-         <a href="Animes/Zero No Tsukaima Futatsuki No Kishi.html" class="link">Zero No Tsukaima Futatsuki No Kishi</a>
-      </div>
+      <div id="main"></div>
       <div id="Contact" class="footer" style="margin-top:20px;">
          <div class="footer-content">
             <h3>VKDev</h3>
@@ -542,9 +230,10 @@
       <a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
    </div>
    <script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
-   <script src="wwwroot/js/script.js"></script>
    <script src="wwwroot/js/slider.js"></script>
    <script src="wwwroot/js/news.js"></script>
+   <script src="wwwroot/js/animeList.js" type="module"></script>
+   <script src="wwwroot/js/script.js"></script>
 </body>
 
 </html>

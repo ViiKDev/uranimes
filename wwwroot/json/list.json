@@ -1,0 +1,562 @@
+﻿[
+	{
+		"name": "5-Toubun No Hanayome",
+		"path": "Animes/5-Toubun No Hanayome.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zIBfMBcV7ENjEfuFx93xJYnOtLs.jpg"
+	},
+	{
+		"name": "Absolute Duo",
+		"path": "Animes/Absolute Duo.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lbtRPdxPYwhzflTQRmQpKrskzJm.jpg"
+	},
+	{
+		"name": "Accel World",
+		"path": "Animes/Accel World.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vUQb4TnTrIh67SpJwmZjgYy50ZB.jpg"
+	},
+	{
+		"name": "Akame Ga Kill",
+		"path": "Animes/Akame Ga Kill.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2N7eR7UQv0QmsWHFEX7SuzU8RXi.jpg"
+	},
+	{
+		"name": "Ano Hana",
+		"path": "Animes/Ano Hana.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eHPGDv3phfLzexVD4yy4lwm6JFj.jpg"
+	},
+	{
+		"name": "Ansatsu Kyoushitsu",
+		"path": "Animes/Ansatsu Kyoushitsu.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fIOYLPOorKvP4wut9y0edpnWROz.jpg"
+	},
+	{
+		"name": "Assassins Pride",
+		"path": "Animes/Assassins Pride.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cEG0QHGpHiKxNir77MWN4VPad3l.jpg"
+	},
+	{
+		"name": "Astarotte No Omocha",
+		"path": "Animes/Astarotte No Omocha.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4ZmANWHQHRchkLdNJcgcZhbhqCC.jpg"
+	},
+	{
+		"name": "Black Bullet",
+		"path": "Animes/Black Bullet.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/58gkKKlYiS6kQPmGXZxf2lzRm6D.jpg"
+	},
+	{
+		"name": "Black Rock Shooter",
+		"path": "Animes/Black Rock Shooter.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6WV5KcDVoe8L17Q8nQqCOHPvlRF.jpg"
+	},
+	{
+		"name": "Blend S",
+		"path": "Animes/Blend S.html",
+		"img": "https://image.tmdb.org/t/p/w185/oG14pQIT6bluw8xjhMGWlmFZ6Xo.jpg"
+	},
+	{
+		"name": "Boku No Hero",
+		"path": "Animes/Boku No Hero.html",
+		"img": "https://image.tmdb.org/t/p/w185/7fFM4DGuTcVK8GUIdRwKvb0PZOM.jpg"
+	},
+	{
+		"name": "Boku Wa Tomodachi Ga Sukunai",
+		"path": "Animes/Boku Wa Tomodachi Ga Sukunai.html",
+		"img": "https://image.tmdb.org/t/p/w185/jhHbQMrxTNnNnuL2CNja0KJinDr.jpg"
+	},
+	{
+		"name": "Chainsaw Man",
+		"path": "Animes/Chainsaw Man.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cOyU8ScRGKXChrRsxdrt6nYkzFh.jpg"
+	},
+	{
+		"name": "Chrno Crusade",
+		"path": "Animes/Chrno Crusade.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oqmCYHEqiEhArl0hFx7xoWlyCCc.jpg"
+	},
+	{
+		"name": "Classroom Crisis",
+		"path": "Animes/Classroom Crisis.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/u1zJWubItdo3A2coULoI3HISWPp.jpg"
+	},
+	{
+		"name": "Classroom Of The Elite",
+		"path": "Animes/Classroom Of The Elite.html",
+		"img": "https://image.tmdb.org/t/p/w185/9MpNCgkEn2GATj5BjR3aSuc4aQH.jpg"
+	},
+	{
+		"name": "Conception",
+		"path": "Animes/Conception.html",
+		"img": "https://image.tmdb.org/t/p/w185/nrOaefw3x3iXjnMb0FpJABIzAc0.jpg"
+	},
+	{
+		"name": "Da Capo",
+		"path": "Animes/Da Capo.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cxsshGAYfCOPCUBZS2SUdqZk1DP.jpg"
+	},
+	{
+		"name": "Darling In The Franxx",
+		"path": "Animes/Darling In The Franxx.html",
+		"img": "https://image.tmdb.org/t/p/w185/oO5tir7lV4slZHTyhW8lTFrgyif.jpg"
+	},
+	{
+		"name": "Darwin's Game",
+		"path": "Animes/Darwin's Game.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/x933D1EFIpSV5PkPWKJkTs3QuZZ.jpg"
+	},
+	{
+		"name": "Digimon",
+		"path": "Animes/Digimon.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vYoiupxiXVJBT8Bz0hCBwi1FLdL.jpg"
+	},
+	{
+		"name": "Dog Days",
+		"path": "Animes/Dog Days.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/htSW5V0UpFZpVjldYnr8BvTe2T0.jpg"
+	},
+	{
+		"name": "Doukyonin Wa Hiza, Tokidoki, Atama No Ue",
+		"path": "Animes/Doukyonin Wa Hiza, Tokidoki, Atama No Ue.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jqZT3uMYX3epFp3w6X2CUZ7PxdU.jpg"
+	},
+	{
+		"name": "Dr. Stone",
+		"path": "Animes/Dr. Stone.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dLlnzbDCblBXcJqFLXyvN43NIwp.jpg"
+	},
+	{
+		"name": "Dungeon ni Deai o Motomeru no wa",
+		"path": "Animes/Dungeon ni Deai o Motomeru no wa.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/q0hH5LI9KZktULTAsYNhHBuzVQn.jpg"
+	},
+	{
+		"name": "Elfen Lied",
+		"path": "Animes/Elfen Lied.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3UnmNPTDMOThd8Oi9L2pEXqfO0D.jpg"
+	},
+	{
+		"name": "Eromanga Sensei",
+		"path": "Animes/Eromanga Sensei.html",
+		"img": "https://image.tmdb.org/t/p/w185/KN8DcBRLwPgdTnU3d643rj9fck.jpg"
+	},
+	{
+		"name": "Gabriel DropOut",
+		"path": "Animes/Gabriel DropOut.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/54RLULTycUjyIfsqjYwijDbO9C0.jpg"
+	},
+	{
+		"name": "Given",
+		"path": "Animes/Given.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/pdDCcAq8RNSZNk81PXYoHNUPHjn.jpg"
+	},
+	{
+		"name": "Gochuumon Wa Usagi Desuka",
+		"path": "Animes/Gochuumon Wa Usagi Desuka.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zBAmY0IqkVQuDWS4wIOMKVhCFMw.jpg"
+	},
+	{
+		"name": "Grisaia No Rakuen",
+		"path": "Animes/Grisaia No Rakuen.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/bbyEffAlFj2X53yG37VQSgg3uL2.jpg"
+	},
+	{
+		"name": "Guraburu!",
+		"path": "Animes/Guraburu!.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fN9PzJzQycLiFxApLEjQcF1rhmH.jpg"
+	},
+	{
+		"name": "Haikyuu!!",
+		"path": "Animes/Haikyuu!!.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eRArVje5hHPfDhG9zXVmRBAxFxD.jpg"
+	},
+	{
+		"name": "Haiyore! Nyaruko-San",
+		"path": "Animes/Haiyore! Nyaruko-San.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/noqhTDliIXYpGotxipUhEv4HfKN.jpg"
+	},
+	{
+		"name": "Hidan No Aria",
+		"path": "Animes/Hidan No Aria.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/luGh4M3QdvGG4skCF7PeScTNW7k.jpg"
+	},
+	{
+		"name": "Hina Logi From Luck & Logic",
+		"path": "Animes/Hina Logi From Luck & Logic.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4fG6EUkCu7tDRmwZsWVreSjiWHm.jpg"
+	},
+	{
+		"name": "Isekai Maou To Shoukan Shoujo No Dorei Majutsu",
+		"path": "Animes/Isekai Maou To Shoukan Shoujo No Dorei Majutsu.html",
+		"img": "https://image.tmdb.org/t/p/w185/tDXudvFg29TS87XIsY3IlTlVGUN.jpg"
+	},
+	{
+		"name": "Itsuka Tenma No Kuro Usagi",
+		"path": "Animes/Itsuka Tenma No Kuro Usagi.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wDFvddtioQmp2mbydtyw9da6qRn.jpg"
+	},
+	{
+		"name": "Jahy-Sama Wa Kujikenai!",
+		"path": "Animes/Jahy-Sama Wa Kujikenai!.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9hrlzVgSK0y2sA6Q3Nk8oSOIYUD.jpg"
+	},
+	{
+		"name": "Jin Tian Kai Shi Zuo Ming Xing",
+		"path": "Animes/Jin Tian Kai Shi Zuo Ming Xing.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kS8c0fqE1WdQ38PzS1k4ZZOORNj.jpg"
+	},
+	{
+		"name": "K-On",
+		"path": "Animes/K-On.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zzalompeC1sWeYtTCbna2jyd8RD.jpg"
+	},
+	{
+		"name": "Kageki Shoujo!!",
+		"path": "Animes/Kageki Shoujo!!.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9qMs8kCRS8bgr0iIXy2ptZzNCsG.jpg"
+	},
+	{
+		"name": "Kamisama No Inai Nichiyoubi",
+		"path": "Animes/Kamisama No Inai Nichiyoubi.html",
+		"img": "https://image.tmdb.org/t/p/w185/gyFVLUhSiwK9rSPuHlpIa1IDacz.jpg"
+	},
+	{
+		"name": "Kannagi",
+		"path": "Animes/Kannagi.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9qJmKZbU3vjqZ6054cbFgXUUZtk.jpg"
+	},
+	{
+		"name": "Katana Maidens - Mini Toji",
+		"path": "Animes/Katana Maidens - Mini Toji.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/n9ZztdCH6D1vpHNTVViEPTFscD5.jpg"
+	},
+	{
+		"name": "Kekkai Sensen",
+		"path": "Animes/Kekkai Sensen.html",
+		"img": "https://image.tmdb.org/t/p/w185/uOUn6sBwkUjD72e9uf4F6nVfBRv.jpg"
+	},
+	{
+		"name": "Kenja No Mago",
+		"path": "Animes/Kenja No Mago.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vdRt0W5sZDLlshT2o3y7c7gZYJA.jpg"
+	},
+	{
+		"name": "Kill La Kill",
+		"path": "Animes/Kill La Kill.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y2OuQF4oiynNvsTlnyb40jqGMdJ.jpg"
+	},
+	{
+		"name": "Kill Me Baby",
+		"path": "Animes/Kill Me Baby.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uzQMw7XGZsXDpbC7CzLT7LL0Ekq.jpg"
+	},
+	{
+		"name": "Kobayashi-San Chi No Maid Dragon",
+		"path": "Animes/Kobayashi-San Chi No Maid Dragon.html",
+		"img": "https://image.tmdb.org/t/p/w185/om3YncMCrPcIN4nEWVJsyT94dar.jpg"
+	},
+	{
+		"name": "Kono Minikuku Mo Utsukushii Sekai",
+		"path": "Animes/Kono Minikuku Mo Utsukushii Sekai.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fk7X26y0n7BXlm0BbI2NYQHVl3C.jpg"
+	},
+	{
+		"name": "Konohana Kitan",
+		"path": "Animes/Konohana Kitan.html",
+		"img": "https://image.tmdb.org/t/p/w185/nIe7BJo9yC29KIC1V4Y48w3wYUL.jpg"
+	},
+	{
+		"name": "Koro-sensei Quest!",
+		"path": "Animes/Koro-sensei Quest!.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dZlQUneXi0x5Fu8FvAVS1wi6sJ4.jpg"
+	},
+	{
+		"name": "Last Period Owarinaki Rasen no Monogatari",
+		"path": "Animes/Last Period Owarinaki Rasen no Monogatari.html",
+		"img": "https://image.tmdb.org/t/p/w185/23Yhe32i6FKVosj9hp1lCOQYpob.jpg"
+	},
+	{
+		"name": "Love Live! Sunshine!!",
+		"path": "Animes/Love Live! Sunshine!!.html",
+		"img": "https://image.tmdb.org/t/p/w185/iflMQCWn4Hsyd7hLixgM2e6pTVw.jpg"
+	},
+	{
+		"name": "Luck & Logic",
+		"path": "Animes/Luck & Logic.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wVwDqg8Uz7Qp8t3gb0J65MFSeE4.jpg"
+	},
+	{
+		"name": "Lucky Star",
+		"path": "Animes/Lucky Star.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kgfhRBlvfAFn7ZnfKVtnYeheNPN.jpg"
+	},
+	{
+		"name": "Machine-Doll Wa Kizutsukanai",
+		"path": "Animes/Machine-Doll Wa Kizutsukanai.html",
+		"img": "https://image.tmdb.org/t/p/w185/3Np1JpIkdVVilNjFtdFMNzsjEd3.jpg"
+	},
+	{
+		"name": "Maken-Ki",
+		"path": "Animes/Maken-Ki.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wQub2j7xzXxjtjELPqDYgDmru4r.jpg"
+	},
+	{
+		"name": "Maoujou De Oyasumi",
+		"path": "Animes/Maoujou De Oyasumi.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8XNecC4GINYl9yURB37oun34tx0.jpg"
+	},
+	{
+		"name": "Mini Dragon",
+		"path": "Animes/Mini Dragon.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mywM6qCGCwdGkZjZrvSISM1W69I.jpg"
+	},
+	{
+		"name": "Monochrome Factor",
+		"path": "Animes/Monochrome Factor.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dcwmWmY2QNoNg3Pf5OMHdqdF4z8.jpg"
+	},
+	{
+		"name": "Musaigen No Phantom World",
+		"path": "Animes/Musaigen No Phantom World.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ahDdggIiFtQh7jj42XKFbtxl4r.jpg"
+	},
+	{
+		"name": "Nanatsu No Taizai",
+		"path": "Animes/Nanatsu No Taizai.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fJ0Jy7NNdqIuYcYNqeK7YJHVLL0.jpg"
+	},
+	{
+		"name": "Nausicaä of the Valley of the Wind",
+		"path": "Animes/Nausicaä of the Valley of the Wind.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/j9SCbf05YWwxCbCcXZyBsMkRagP.jpg"
+	},
+	{
+		"name": "No Game No Life",
+		"path": "Animes/No Game No Life.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/qoj8t5XdsyBJGMWV8MfZviz7gcA.jpg"
+	},
+	{
+		"name": "No Guns Life",
+		"path": "Animes/No Guns Life.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oyUpwZUiAU25jP9f5e6xxXH9OTQ.jpg"
+	},
+	{
+		"name": "Non Non Biyori",
+		"path": "Animes/Non Non Biyori.html",
+		"img": "https://image.tmdb.org/t/p/w185/zOlBPPJAlFSAHf2eRyBDLnEVyDT.jpg"
+	},
+	{
+		"name": "One Piece",
+		"path": "Animes/One Piece.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/335fmCjQq4jRZK2QR3ZVJ84yYO0.jpg"
+	},
+	{
+		"name": "One Room",
+		"path": "Animes/One Room.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mANzjpm9YGabJMxIddGZvUlmtfr.jpg"
+	},
+	{
+		"name": "Ore No Kanojo To Osananajimi Ga Shuraba Sugiru",
+		"path": "Animes/Ore No Kanojo To Osananajimi Ga Shuraba Sugiru.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2TZXT2HaauqP2cciNnJy1EnPHx0.jpg"
+	},
+	{
+		"name": "Ore No Nounai Sentakushi Ga, Gakuen Love Comedy",
+		"path": "Animes/Ore No Nounai Sentakushi Ga, Gakuen Love Comedy.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2TZXT2HaauqP2cciNnJy1EnPHx0.jpg"
+	},
+	{
+		"name": "Phantasy Star Online 2",
+		"path": "Animes/Phantasy Star Online 2.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sF3M6fzwQQreDpqZu050rR8LedZ.jpg"
+	},
+	{
+		"name": "Rail Romanesque",
+		"path": "Animes/Rail Romanesque.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gajw26hYTqToXC3qKQDXoHeoETu.jpg"
+	},
+	{
+		"name": "Rental Magica",
+		"path": "Animes/Rental Magica.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/qbBJI5qornyeUqbDTNZaciLXXiQ.jpg"
+	},
+	{
+		"name": "Rewrite",
+		"path": "Animes/Rewrite.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iyiLtuHFiehUASS5HEDJvUivLIG.jpg"
+	},
+	{
+		"name": "Ryuuou No Oshigoto",
+		"path": "Animes/Ryuuou No Oshigoto.html",
+		"img": "https://image.tmdb.org/t/p/w185/3V60vdfCmKJZVI4NjLg46od6RqA.jpg"
+	},
+	{
+		"name": "Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga",
+		"path": "Animes/Saikin, Imouto No Yousu Ga Chotto Okashiinda Ga.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/peaa4VFgoLXF0zDSMb4eYj30JhL.jpg"
+	},
+	{
+		"name": "Schwarzesmarken",
+		"path": "Animes/Schwarzesmarken.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/76eOzNrqWWmOMte87S5rTt9XrxN.jpg"
+	},
+	{
+		"name": "Seirei Tsukai No Blade Dance",
+		"path": "Animes/Seirei Tsukai No Blade Dance.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4zbUJBbk1I2Sk6JRN4J9hXNhwiY.jpg"
+	},
+	{
+		"name": "Sentouin, Hakenshimasu!",
+		"path": "Animes/Sentouin, Hakenshimasu!.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/h3BbDbk18vWprsEaHpZSboADNqA.jpg"
+	},
+	{
+		"name": "Seto No Hanayome",
+		"path": "Animes/Seto No Hanayome.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yU9TjTkzfOjq6upPa6Qc4ki2n9Q.jpg"
+	},
+	{
+		"name": "Sewayaki Kitsune No Senko-San",
+		"path": "Animes/Sewayaki Kitsune No Senko-San.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4pdyOLqy1fBktuxKstmRSiiCPgD.jpg"
+	},
+	{
+		"name": "Shakugan No Shana",
+		"path": "Animes/Shakugan No Shana.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3Y3DxgbIZQAj3M8VsB3oG0oL5qC.jpg"
+	},
+	{
+		"name": "Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai",
+		"path": "Animes/Shimoneta To Iu Gainen Ga Sonzai Shinai Taikutsu Na Sekai.html",
+		"img": "https://image.tmdb.org/t/p/w185/sPOEXyfWHFmcFaCw3S5Ym41LNv6.jpg"
+	},
+	{
+		"name": "Shokugeki No Souma",
+		"path": "Animes/Shokugeki No Souma.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/txThYw4WP7XUFbcj5BEX2qjkVfL.jpg"
+	},
+	{
+		"name": "Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka",
+		"path": "Animes/Shuumatsu Nani Shitemasu Ka Isogashii Desu Ka Sukutte Moratte Ii Desu Ka.html",
+		"img": "https://image.tmdb.org/t/p/w185/eYcmae9NHBloAYlMCR22XoFinbV.jpg"
+	},
+	{
+		"name": "Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita",
+		"path": "Animes/Slime Taoshite 300-Nen, Shiranai Uchi Ni Level Max Ni Nattemashita.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/l1I63ZAwUmCOH6PS7EfUb9DwoMz.jpg"
+	},
+	{
+		"name": "Slow Start",
+		"path": "Animes/Slow Start.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Apwvryh8vaN6KEdAcfdcw32ibJ.jpg"
+	},
+	{
+		"name": "So Ra No Wo To",
+		"path": "Animes/So Ra No Wo To.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/tMKu4fdLTkoviDJ06SLZVZquV2p.jpg"
+	},
+	{
+		"name": "Sumomomo Momomo - Chijo Saikyo No Yome",
+		"path": "Animes/Sumomomo Momomo - Chijo Saikyo No Yome.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/dqTGGbhb5fgsWP3hZsgpi0b8EXD.jpg"
+	},
+	{
+		"name": "Tantei Wa Mou, Shindeiru",
+		"path": "Animes/Tantei Wa Mou, Shindeiru.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5NXO5acrIa2hkDxIqFyKcVW6vca.jpg"
+	},
+	{
+		"name": "Tate No Yuusha No Nariagari",
+		"path": "Animes/Tate No Yuusha No Nariagari.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6cXf5EDwVhsRv8GlBzUTVnWuk8Z.jpg"
+	},
+	{
+		"name": "The Money Of Soul And Possibility Control",
+		"path": "Animes/The Money Of Soul And Possibility Control.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xiUCxsq5K2UoG0EVfGRlDFMFKmB.jpg"
+	},
+	{
+		"name": "Toaru Kagaku No Railgun",
+		"path": "Animes/Toaru Kagaku No Railgun.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zmcS7fnsev9gZ6o1ZpNhspDvX9U.jpg"
+	},
+	{
+		"name": "Tokyo Revengers",
+		"path": "Animes/Tokyo Revengers.html",
+		"img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/e77ZdXs1tFmpTOiFfEZSlcz9ZWN.jpg"
+	},
+	{
+		"name": "Toriko",
+		"path": "Animes/Toriko.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yb7E9VTSY2551ujj13i7wstkiSV.jpg"
+	},
+	{
+		"name": "UQ Holder! Mahou Sensei Negima! 2",
+		"path": "Animes/UQ Holder! Mahou Sensei Negima! 2.html",
+		"img": "https://image.tmdb.org/t/p/w185/qLbKFlOD5txfUQHI7q8z0VvfCvQ.jpg"
+	},
+	{
+		"name": "Val X Love",
+		"path": "Animes/Val X Love.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6TIEhcHYK8fLmgDKxrLE6tieEQQ.jpg"
+	},
+	{
+		"name": "Watashi Ni Tenshi Ga Maiorita!",
+		"path": "Animes/Watashi Ni Tenshi Ga Maiorita!.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yaIs7UDJ6Vo7DbWPl4cTdv4bUw7.jpg"
+	},
+	{
+		"name": "Wo De Tian Jie Nu You",
+		"path": "Animes/Wo De Tian Jie Nu You.html",
+		"img": "https://image.tmdb.org/t/p/w185/7Bqii6LB6Er7e8LHeSdYeslTNbm.jpg"
+	},
+	{
+		"name": "Wo Kai Dongwuyuan Naxie Nian",
+		"path": "Animes/Wo Kai Dongwuyuan Naxie Nian.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nz9AC00cX1ZUSE0km88VpRrDyIw.jpg"
+	},
+	{
+		"name": "Wonder Egg Priority",
+		"path": "Animes/Wonder Egg Priority.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/qB9k5DeUea5IdKh8xyeWMcejS8R.jpg"
+	},
+	{
+		"name": "Zero No Tsukaima Futatsuki No Kishi",
+		"path": "Animes/Zero No Tsukaima Futatsuki No Kishi.html",
+		"img": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/edpG7IAoHtEfQ2XMMjcpBarlOF4.jpg"
+	},
+	{
+		"name": "Akuyaku Reijou nanode Last Boss wo Kattemimashita",
+		"path": "Animes/Akuyaku Reijou nanode Last Boss wo Kattemimashita.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/tgpifHjdB2WXC4eGdOlcdbmBJzw.jpg"
+	},
+	{
+		"name": "Assault Lily Bouquet",
+		"path": "Animes/Assault Lily Bouquet.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bpUkMqQ5bbMiBipwrYpbg33kAQC.jpg"
+	},
+	{
+		"name": "Black Rock Shooter Dawn Fall",
+		"path": "Animes/Black Rock Shooter Dawn Fall.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/x607kupq3V7rsIz2gakITqwElum.jpg"
+	},
+	{
+		"name": "Boku No Tonari Ni Ankoku Hakaishin Ga Imasu",
+		"path": "Animes/Boku No Tonari Ni Ankoku Hakaishin Ga Imasu.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7Hif3pAxZZtZVjVDvChhc6wNnHj.jpg"
+	},
+	{
+		"name": "Chicchana Yukitsukai Sugar",
+		"path": "Animes/Chicchana Yukitsukai Sugar.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kRgybu9DlvERoP4PTCkT6C1TIlx.jpg"
+	},
+	{
+		"name": "Danchigai",
+		"path": "Animes/Danchigai.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/upCe1lboYysrt8SANIhaHjuEtXQ.jpg"
+	},
+	{
+		"name": "Jujutsu Kaisen",
+		"path": "Animes/Jujutsu Kaisen.html",
+		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eGYaVtwWInTzAT6HOGyAj1BTqnB.jpg"
+	}
+]
