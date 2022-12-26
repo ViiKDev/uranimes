@@ -5,14 +5,16 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
    <link rel="stylesheet" href="wwwroot/bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="wwwroot/js/jquery.cookie-1.4.1.min.js"></script>
    <script type="text/javascript" src="https://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+   <script src="wwwroot/js/animeList.js" type="module"></script>
    <link rel="stylesheet" type="text/css" href="https://w2ui.com/src/w2ui-1.4.2.min.css" />
    <!-- <script language="javascript"> 
      function setCookie(nome, valor, dias){ 
@@ -107,96 +109,37 @@
             <div class="slide-wrapper">
                <div class="controller">
                   <div>
-                     <h2>Animes Recomendados</h2>
+                     <h2>Animes recomendados</h2>
                   </div>
                   <div id="controls">
                      <button class="voltar"><i class="fas fa-angle-left"></i></button>
                      <button class="avancar"><i class="fas fa-angle-right"></i></button>
                   </div>
                </div>
-               <div class="my-slider">
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-1" onclick="slideItemClick('Animes/Akame Ga Kill.html')">
-                           <a href="Animes/Akame Ga Kill.html">Akame Ga Kill</a>
-                        </div>
-                        <!-- <br>
-                       <div>
-                          <h3>California</h3>
-                          <p>Los Angeles</p>
-                       </div> -->
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-2" onclick="slideItemClick('Animes/Boku No Hero.html')">
-                           <a href="Animes/Boku No Hero.html">Boku No Hero</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-3" onclick="slideItemClick('Animes/Darwin\'s Game.html')">
-                           <a href="Animes/Darwin's Game.html">Darwin's Game</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-4" onclick="slideItemClick('Animes/Kobayashi-San Chi No Maid Dragon.html')">
-                           <a href="Animes/Kobayashi-San Chi No Maid Dragon.html">Kobayashi-San Chi No Maid
-                              Dragon</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-5" onclick="slideItemClick('Animes/Mini Dragon.html')">
-                           <a href="Animes/Mini Dragon.html">Mini Dragon</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-6" onclick="slideItemClick('Animes/Nanatsu No Taizai.html')">
-                           <a href="Animes/Nanatsu No Taizai.html">Nanatsu No Taizai</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-7" onclick="slideItemClick('Animes/No Game No Life.html')">
-                           <a href="Animes/No Game No Life.html">No Game No Life</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-8" onclick="slideItemClick('Animes/Shokugeki No Souma.html')">
-                           <a href="Animes/Shokugeki No Souma.html">Shokugeki No Souma</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-9" onclick="slideItemClick('Animes/Tokyo Revengers.html')">
-                           <a href="Animes/Tokyo Revengers.html">Tokyo Revengers</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div>
-                     <div class="slide">
-                        <div class="slide-img img-10" onclick="slideItemClick('Animes/Val X Love.html')">
-                           <a href="Animes/Val X Love.html" class="link">Val X Love</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <div id="mainSlides" class="my-slider"></div>
             </div>
          </div>
       </div>
    </section>
-   <div id="keepWatching"></div>
+   <div id="keepWatching" style="display:none;">
+      <section id="slider2">
+         <div class="container-slider">
+            <div class="subcontainer-slider">
+               <div class="slide-wrapper">
+                  <div class="controller">
+                     <div id="kWAs"></div>
+                     <div id="controls2">
+                        <button class="voltar2"><i class="fas fa-angle-left"></i></button>
+                        <button class="avancar2"><i class="fas fa-angle-right"></i></button>
+                     </div>
+                  </div>
+                  <div id="kWSlides" class="my-slider2">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
    <!--<nav class="navigation-bar">
      <img class="logo" src="logo.png">
      <a href="#">Home</a>
@@ -206,7 +149,7 @@
      <a href="#">Get in Touch</a>
   </nav>-->
    <h1>
-      Todos os Animes
+      Todos os animes
    </h1>
    <div class="scrollingArea">
       <div id="main"></div>
@@ -230,10 +173,11 @@
       <a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
    </div>
    <script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
-   <script src="wwwroot/js/slider.js"></script>
    <script src="wwwroot/js/news.js"></script>
-   <script src="wwwroot/js/animeList.js" type="module"></script>
-   <script src="wwwroot/js/script.js"></script>
+   <script defer src="wwwroot/js/script.js"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+   <script defer src="wwwroot/js/slider.js"></script>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     --caixa-disp: none;
     --tamanho-caixa: 0;
     --color-search: white;
-    --color-nav: rgba(33, 37, 41, .8);
+    --color-nav: rgba(7, 10, 17, 0.84);
     --color-nav-texts: white;
     --color-bg: rgba(0, 0, 0, 0.9);
     --color-texts: lightyellow;
@@ -506,7 +506,6 @@ NAVBAR OLD*/
         width: 65%;
     }
 }
-
 
 @media (max-width: 767px) {
     #carouselExampleIndicators {

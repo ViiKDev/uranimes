@@ -6,9 +6,45 @@ var nameInputed = getCookie('nameInputed');
 var showAlert = getCookie('showAlert');
 var watchList = [];
 
-if ($.cookie('watchList') != undefined) {
-    watchList = JSON.parse($.cookie('watchList'));
+var response;
+var data;
+const url = "wwwroot/json/list.json";
+const fetchJson = async () => {
+    try {
+        data = await fetch(url);
+        response = await data.json();
+    } catch (error) {
+        console.log(error);
+    }
+};
+fetchJson();
+
+if (localStorage.watchList != undefined) {
+    watchList = JSON.parse(localStorage.watchList);
 }
+
+// if ($.cookie('watchList') != undefined) {
+//     watchList = JSON.parse($.cookie('watchList'));
+// }
+
+if (watchList != '') {
+    $("#keepWatching").attr('style', null);
+    if (username) {
+        $("#kWAs").prepend('<h2>Continuar assistindo como "' + username + '"</h2>');
+    } else {
+        $("#kWAs").prepend("<h2>Continuar assistindo</h2>");
+    }
+    for (let i = 0; i < watchList.length; i++) {
+        $("#kWSlides").append("<div><div class='slide2'><div class='slide-img'><a href='' class='link'></a></div></div></div>");
+    }
+    $(".slide2 .slide-img").each(function (i, obj) {
+        // $(this).attr('onclick', 'slideItemClick("' + data[numArray[i]].path + '")')
+        $(this).attr('style', 'background-image: url("' + watchList[i][2] + '");');
+        $(this).find('a').attr('href', watchList[i][0]);
+        $(this).find('a').text(watchList[i][1]);
+    });
+}
+
 const button = document.querySelector('button');
 
 function mostrarCaixa() {
@@ -35,14 +71,15 @@ function mostrarCaixa() {
 }
 
 function randomSite() {
-    var tds = document.getElementsByClassName('link');
+    var tds = document.querySelectorAll("#main .link");
     var rand = Math.floor(Math.random() * tds.length);
-    location.href = tds[rand];
+    KeepWatchingCheck($(tds[rand]));
+    location.href = tds[rand].href;
 }
 
-function slideItemClick(i) {
-    location.href = i;
-}
+// function slideItemClick(i) {
+//     location.href = i;
+// }
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -112,48 +149,66 @@ window.onload = function () {
             }
         }
     }
-    if (watchList != '') {
-        if (username) {
-            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo Como " + username + "</h1>");
-        } else {
-            $("#keepWatching").prepend("<h1 style='color: lightyellow;'>Continuar Assistindo</h1>");
-        }
-        for (let i = 0; i < watchList.length; i++) {
-            $("#keepWatching").append("<div><a href='" + watchList[i][0] + "' class='link'>" + watchList[i][1] + "</a></div>");
-        }
-    }
 };
 
-window.addEventListener("pageshow", function (event) {
-    var historyTraversal = event.persisted ||
-        (typeof window.performance != "undefined" &&
-            window.performance.navigation.type === 2);
-    if (historyTraversal) {
-        // Handle page restore.
-        window.location.reload();
-    }
-});
+// window.addEventListener("pageshow", function (event) {
+//     var historyTraversal = event.persisted ||
+//         (typeof window.performance != "undefined" &&
+//             window.performance.navigation.type === 2);
+//     if (historyTraversal) {
+//         // Handle page restore.
+//         window.location.reload();
+//     }
+// });
 
 // window.onbeforeunload = function () {
 //     alert("Obrigado pela preferência!");
 // };
 
 $("#main").on('click', '.link', function () {
-    if (watchList != '') {
-        for (let i = 0; i < watchList.length; i++) {
-            if (watchList[i].includes($(this).text()) == true) {
-                watchList.splice(i, 1);
-                watchList.unshift([$(this).attr('href'), $(this).text(), $(this).parent().find('img').attr('src')]);
-                break;
-            } else {
-                if (i == watchList.length - 1) {
-                    watchList.unshift([$(this).attr('href'), $(this).text(), $(this).parent().find('img').attr('src')]);
-                    break;
-                }
-            }
-        }
-    } else {
-        watchList.unshift([$(this).attr('href'), $(this).text()]);
-    }
-    $.cookie('watchList', JSON.stringify(watchList));
+    KeepWatchingCheck($(this));
 });
+
+$("#mainSlides").on('click', '.slide-img', function () {
+    KeepWatchingCheck($(this).find('a'));
+    location.href = $(this).find('a').attr('href');
+});
+
+$("#keepWatching").on('click', '.slide-img', function () {
+    KeepWatchingCheck($(this).find('a'));
+    location.href = $(this).find('a').attr('href');
+});
+
+$("#main div img").click(function () {
+    w2popup.open({
+        title: 'Image',
+        body: '<div class="w2ui-centered"><img src="' + $(this).attr('src') + '"></img></div>'
+    });
+});
+
+function KeepWatchingCheck(obj) {
+
+    for (let j = 0; j < response.length; j++) {
+        if (response[j].name.includes(obj.text())) {
+            if (watchList != '') {
+                for (let i = 0; i < watchList.length; i++) {
+                    if (watchList[i].includes(obj.text())) {
+                        watchList.splice(i, 1);
+                        watchList.unshift([response[j].path, response[j].name, response[j].img]);
+                        break;
+                    } else {
+                        if (i == watchList.length - 1) {
+                            watchList.unshift([response[j].path, response[j].name, response[j].img]);
+                            break;
+                        }
+                    }
+                }
+            } else {
+                watchList.unshift([response[j].path, response[j].name, response[j].img]);
+            }
+            break;
+        }
+    }
+    localStorage.watchList = JSON.stringify(watchList);
+    // $.cookie('watchList', JSON.stringify(watchList));
+}
