@@ -473,6 +473,82 @@ NAVBAR OLD*/
     width: 252px;
 }
 
+#searchResults {
+    top: 100%;
+    position: absolute;
+    width: 300px;
+    max-height: 340px;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.listResults {
+    width: 300px;
+}
+
+.found {
+    height: 100px;
+    display: flex;
+    box-shadow: 0 1px 0 gray;
+    /* border-bottom: gray 1px solid; */
+}
+
+/*
+    Carousel change style to width 100%, margins r&l 0, margin-top right after navbar and borderless
+    fix images to fit in new carousel
+*/
+
+.found div {
+    margin: 10px;
+    width: calc(300px - 66.66px);
+    font-family: ubuntu-r;
+}
+
+.found div a {
+    display: block;
+    width: 80%;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.found p {
+    color: aliceblue;
+    font-size: 10px;
+}
+
+.found img {
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.notFound {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: ubuntu-r;
+}
+
+.notFound h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.notFound h6 {
+    font-size: 15px;
+}
+
 
 /* Custom Media Queries */
 

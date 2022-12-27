@@ -1,10 +1,12 @@
 ﻿var aberto = 0;
 var pesquisa = document.getElementById("pesquisa");
+var resultado = document.getElementById("searchResults")
 var pixKey = 'ffc1ec44-10d8-4742-a770-2abb42142827';
 var username = getCookie('username');
 var nameInputed = getCookie('nameInputed');
 var showAlert = getCookie('showAlert');
 var watchList = [];
+var searchResultList = [];
 
 var response;
 var data;
@@ -55,8 +57,12 @@ function mostrarCaixa() {
         document.documentElement.style.setProperty('--caixa-disp', 'block');
         document.documentElement.style.setProperty('--tamanho-caixa', '300px');
         document.documentElement.style.setProperty('--color-search', 'rgb(143, 25, 25)');
-        pesquisa.value = "Ainda não implementado...";
+        pesquisa.value = '';
         pesquisa.focus();
+        $(resultado).find('.listResults').empty();
+        resultado.style.setProperty('visibility', 'visible');
+        resultado.style.setProperty('opacity', '1');
+        // resultado.style.setProperty('width', '300px');
     }
     else {
         aberto = 0;
@@ -65,9 +71,39 @@ function mostrarCaixa() {
         setTimeout(function () {
             document.documentElement.style.setProperty('--caixa-disp', 'none');
         }, 300)
-        pesquisa.value = "";
+        resultado.style.setProperty('visibility', 'hidden');
+        resultado.style.setProperty('opacity', '0');
+        // resultado.style.setProperty('width', '0');
     }
     button.disabled = false;
+}
+
+$(pesquisa).on('input', function () {
+    $(resultado).find('.listResults').empty();
+    searchResultList = [];
+    if (pesquisa.value != '') {
+        if (searchAnimes(pesquisa.value)) {
+            for (let i = 0; i < searchResultList.length; i++) {
+                // $("#searchResults .listResults").append('<div class="found"><h5>' + searchResultList[i].name + '</h5></div>');
+                $("#searchResults .listResults").append('<div class="found"><img src="' + searchResultList[i].img + '"><div><a href="' + searchResultList[i].path + '">' + searchResultList[i].name + '</a><p>Anime Description...</p></div></div>');
+            }
+        } else {
+            $("#searchResults .listResults").append('<div class="notFound"><h5>Sem resultados encontrados!</h5><h6>Tente outro título...</h6></div>');
+        }
+    }
+});
+
+function searchAnimes(val) {
+    for (let i = 0; i < response.length; i++) {
+        if (response[i].name.search(new RegExp(val, "i")) == 0) {
+            searchResultList.push(response[i]);
+        }
+    }
+    if (searchResultList != '') {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function randomSite() {
@@ -182,6 +218,11 @@ $("#main div img").click(function () {
         title: 'Image',
         body: '<div class="w2ui-centered"><img src="' + $(this).attr('src') + '"></img></div>'
     });
+});
+
+$("#searchResults").on('click', '.found', function () {
+    KeepWatchingCheck($(this).find('div').find('a'));
+    location.href = $(this).find('div').find('a').attr('href');
 });
 
 function KeepWatchingCheck(obj) {
