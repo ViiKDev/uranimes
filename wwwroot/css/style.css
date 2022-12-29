@@ -8,6 +8,7 @@
     --color-texts: lightyellow;
     --color-links: lightblue;
     --color-buttons: white;
+    --navbar-height: 10px;
     /* --color-link-hover: ;
     --color-link-focus: ;
     --color-link-active: ; */
@@ -337,6 +338,7 @@ NAVBAR OLD*/
     width: 0;
     height: 100%;
     transition: all 0.3s ease-in-out;
+    font-size: 12px;
 }
 
 .barra input {
@@ -403,9 +405,9 @@ NAVBAR OLD*/
 }
 
 #carouselExampleIndicators {
-    width: 70%;
-    margin: 90px 15% 20px 15%;
-    border: 2px solid rgb(33, 37, 41);
+    width: 100%;
+    margin: var(--navbar-height) 0 20px 0;
+    /* border: 2px solid rgb(33, 37, 41); */
 }
 
 
@@ -499,7 +501,7 @@ NAVBAR OLD*/
 
 /*
     Carousel change style to width 100%, margins r&l 0, margin-top right after navbar and borderless
-    fix images to fit in new carousel
+    fix images to fit in new carousel - DONE
 */
 
 .found div {
@@ -553,11 +555,11 @@ NAVBAR OLD*/
 /* Custom Media Queries */
 
 @media (max-width: 991px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 7.5% 20px 7.5%;
         width: 85%;
         margin-top: 160px !important;
-    }
+    } */
 
     .carousel-indicators button {
         width: 5px !important;
@@ -584,11 +586,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 767px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 7.5% 20px 7.5%;
         width: 85%;
         margin-top: 169px !important;
-    }
+    } */
 
     .carousel-indicators button {
         width: 5px !important;
@@ -597,11 +599,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 680px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 7.5% 20px 7.5%;
         width: 85%;
         margin-top: 169px !important;
-    }
+    } */
 
     .carousel-indicators button {
         width: 5px !important;
@@ -628,11 +630,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 428px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 7.5% 20px 7.5%;
         width: 85%;
         margin-top: 208px !important;
-    }
+    } */
 
     .carousel-indicators button {
         width: 5px !important;
@@ -641,11 +643,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 335px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 5% 20px 5%;
         margin-top: 208px !important;
         width: 90%;
-    }
+    } */
 
     .carousel-indicators button {
         width: 4px !important;
@@ -654,11 +656,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 261px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 5% 20px 5%;
         margin-top: 248px !important;
         width: 90%;
-    }
+    } */
 
     .carousel-indicators button {
         width: 4px !important;
@@ -667,11 +669,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 233px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 2.5% 20px 2.5%;
         margin-top: 248px !important;
         width: 95%;
-    }
+    } */
 
     .carousel-indicators button {
         width: 3px !important;
@@ -680,11 +682,11 @@ NAVBAR OLD*/
 }
 
 @media (max-width: 223px) {
-    #carouselExampleIndicators {
+    /* #carouselExampleIndicators {
         margin: 90px 2.5% 20px 2.5%;
         margin-top: 288px !important;
         width: 95%;
-    }
+    } */
 
     .carousel-indicators button {
         width: 2px !important;

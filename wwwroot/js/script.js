@@ -63,6 +63,7 @@ function mostrarCaixa() {
         resultado.style.setProperty('visibility', 'visible');
         resultado.style.setProperty('opacity', '1');
         // resultado.style.setProperty('width', '300px');
+        pesquisa.setAttribute('placeholder', 'Buscar Anime... Ex. ' + RandomContent('name'));
     }
     else {
         aberto = 0;
@@ -250,4 +251,19 @@ function KeepWatchingCheck(obj) {
     }
     localStorage.watchList = JSON.stringify(watchList);
     // $.cookie('watchList', JSON.stringify(watchList));
+}
+
+function RandomContent(opt) {
+    let x = Math.floor((Math.random() * response.length));
+    if (opt == 'name') {
+        return response[x].name;
+    } else {
+        if (opt == 'path') {
+            return response[x].path;
+        } else {
+            if (opt == 'img') {
+                return response[x].img;
+            }
+        }
+    }
 }
