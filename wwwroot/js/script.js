@@ -1,53 +1,31 @@
-﻿var aberto = 0;
-var pesquisa = document.getElementById("pesquisa");
-var resultado = document.getElementById("searchResults")
-var pixKey = 'ffc1ec44-10d8-4742-a770-2abb42142827';
-var username = getCookie('username');
+﻿var username = getCookie('username');
 var nameInputed = getCookie('nameInputed');
 var showAlert = getCookie('showAlert');
-var watchList = [];
-var searchResultList = [];
-
-var response;
-var data;
-const url = "wwwroot/json/list.json";
-const fetchJson = async () => {
-    try {
-        data = await fetch(url);
-        response = await data.json();
-    } catch (error) {
-        console.log(error);
-    }
-};
-fetchJson();
-
-if (localStorage.watchList != undefined) {
-    watchList = JSON.parse(localStorage.watchList);
-}
-
-// if ($.cookie('watchList') != undefined) {
-//     watchList = JSON.parse($.cookie('watchList'));
-// }
 
 if (watchList != '') {
-    $("#keepWatching").attr('style', null);
     if (username) {
         $("#kWAs").prepend('<h2>Continuar assistindo como "' + username + '"</h2>');
     } else {
         $("#kWAs").prepend("<h2>Continuar assistindo</h2>");
     }
-    for (let i = 0; i < watchList.length; i++) {
-        $("#kWSlides").append("<div><div class='slide2'><div class='slide-img'><a href='' class='link'></a></div></div></div>");
-    }
-    $(".slide2 .slide-img").each(function (i, obj) {
-        // $(this).attr('onclick', 'slideItemClick("' + data[numArray[i]].path + '")')
-        $(this).attr('style', 'background-image: url("' + watchList[i][2] + '");');
-        $(this).find('a').attr('href', watchList[i][0]);
-        $(this).find('a').text(watchList[i][1]);
-    });
 }
 
-const button = document.querySelector('button');
+// const url = "wwwroot/json/list.json";
+// const fetchJson = async function () {
+//     try {
+//         data = await fetch(url);
+//         response = await data.json();
+//         console.log("done")
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }();
+
+// fetchJson();
+
+// if ($.cookie('watchList') != undefined) {
+//     watchList = JSON.parse($.cookie('watchList'));
+// }
 
 function mostrarCaixa() {
     // aberto = document.documentElement.style.getPropertyValue('--close');
@@ -234,17 +212,17 @@ function KeepWatchingCheck(obj) {
                 for (let i = 0; i < watchList.length; i++) {
                     if (watchList[i].includes(obj.text())) {
                         watchList.splice(i, 1);
-                        watchList.unshift([response[j].path, response[j].name, response[j].img]);
+                        watchList.unshift(response[j].name);
                         break;
                     } else {
                         if (i == watchList.length - 1) {
-                            watchList.unshift([response[j].path, response[j].name, response[j].img]);
+                            watchList.unshift(response[j].name);
                             break;
                         }
                     }
                 }
             } else {
-                watchList.unshift([response[j].path, response[j].name, response[j].img]);
+                watchList.unshift(response[j].name);
             }
             break;
         }

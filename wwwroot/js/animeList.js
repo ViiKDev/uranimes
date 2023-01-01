@@ -61,3 +61,36 @@ function RandomNumbers(i) {
     }
     numArray.push(x);
 }
+
+
+
+// watchList
+
+
+
+if (localStorage.watchList != undefined) {
+    watchList = JSON.parse(localStorage.watchList);
+}
+
+if (watchList != '') {
+    $("#keepWatching").attr('style', null);
+    for (let i = 0; i < watchList.length; i++) {
+        $("#kWSlides").append("<div><div class='slide2'><div class='slide-img'><a href='' class='link'></a></div></div></div>");
+    }
+    $(".slide2 .slide-img").each(function (i, obj) {
+        // $(this).attr('onclick', 'slideItemClick("' + data[numArray[i]].path + '")')
+        let x = findAnimeOnList(watchList[i]);
+        let item = data[x];
+        $(this).attr('style', 'background-image: url("' + item.img + '");');
+        $(this).find('a').attr('href', item.path);
+        $(this).find('a').text(item.name);
+    });
+}
+
+function findAnimeOnList(val) {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].name.search(new RegExp(val, "i")) == 0) {
+            return i;
+        }
+    }
+}
