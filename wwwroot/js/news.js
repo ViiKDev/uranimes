@@ -1,1 +1,1 @@
-﻿var news = "Barra de busca implementada, cheque se seus animes favoritos estão disponíveis!";
+﻿var news = "Novo anime: Sword Art Online!";

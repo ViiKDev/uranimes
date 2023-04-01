@@ -1,4 +1,4 @@
-Ôªø[
+[
 	{
 		"name": "5-Toubun No Hanayome",
 		"path": "Animes/5-Toubun No Hanayome.html",
@@ -320,8 +320,8 @@
 		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fJ0Jy7NNdqIuYcYNqeK7YJHVLL0.jpg"
 	},
 	{
-		"name": "Nausica√§ of the Valley of the Wind",
-		"path": "Animes/Nausica√§ of the Valley of the Wind.html",
+		"name": "Nausica‰ of the Valley of the Wind",
+		"path": "Animes/Nausica‰ of the Valley of the Wind.html",
 		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/j9SCbf05YWwxCbCcXZyBsMkRagP.jpg"
 	},
 	{
@@ -548,5 +548,10 @@
 		"name": "Jujutsu Kaisen",
 		"path": "Animes/Jujutsu Kaisen.html",
 		"img": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eGYaVtwWInTzAT6HOGyAj1BTqnB.jpg"
+	},
+	{
+		"name":"Sword Art Online",
+		"path":"Animes/Sword Art Online.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/mK9zGGk90VmHLOnK79sqlGFjZjW.jpg"
 	}
 ]
