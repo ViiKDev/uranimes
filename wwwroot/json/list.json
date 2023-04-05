@@ -553,5 +553,15 @@
 		"name":"Sword Art Online",
 		"path":"Animes/Sword Art Online.html",
 		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/mK9zGGk90VmHLOnK79sqlGFjZjW.jpg"
+	},
+	{
+		"name":"Aiura",
+		"path":"Animes/Aiura.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7jghz8BJVYNbrMeQPRGicgiPZvn.jpg"
+	},
+	{
+		"name":"Blue Lock",
+		"path":"Animes/Blue Lock.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tP16wAT98CLwnQ14iWTMZZwfLBr.jpg"
 	}
 ]
