@@ -563,5 +563,20 @@
 		"name":"Blue Lock",
 		"path":"Animes/Blue Lock.html",
 		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tP16wAT98CLwnQ14iWTMZZwfLBr.jpg"
+	},
+	{
+		"name":"Baki",
+		"path":"Animes/Baki.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/c79L7zCnRzDJerrlbIWkNCjA6tg.jpg"
+	},
+	{
+		"name":"Kimetsu no Yaiba",
+		"path":"Animes/Kimetsu no Yaiba.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/o8DB5825myndApdQQHbf4bv1mzL.jpg"
+	},
+	{
+		"name":"Tonikaku Kawaii",
+		"path":"Animes/Tonikaku Kawaii.html",
+		"img":"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/jJKTrIfZKoFV66HGMzSa4tkObK0.jpg"
 	}
 ]
