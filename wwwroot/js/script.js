@@ -4,9 +4,9 @@ var showAlert = getCookie('showAlert');
 
 if (watchList != '') {
     if (username) {
-        $("#kWAs").prepend('<h2>Continuar assistindo como "' + username + '"</h2>');
+        $("#kWAs").prepend('<h2>Continuar assistindo como "' + username + '" <a id="editUN"><i class="fa fa-edit"></i></a></h2>');
     } else {
-        $("#kWAs").prepend("<h2>Continuar assistindo</h2>");
+        $("#kWAs").prepend("<h2>Continuar assistindo <a id='editUN'><i class='fa fa-edit'></i></a></h2>");
     }
 }
 
@@ -203,6 +203,18 @@ $("#searchResults").on('click', '.found', function () {
     KeepWatchingCheck($(this).find('div').find('a'));
     location.href = $(this).find('div').find('a').attr('href');
 });
+
+$("#editUN").on('click', function() {
+    username = prompt("Insira seu nome:", "Harry Potter");
+        if (username != null) {
+            if (nameInputed == false) {
+                nameInputed = true;
+		setCookie('nameInputed', nameInputed, 365);
+	    }
+            setCookie('username', username, 365);
+            alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+        }
+})
 
 function KeepWatchingCheck(obj) {
 
