@@ -88,8 +88,8 @@ function searchAnimes(val) {
 function randomSite() {
     var tds = document.querySelectorAll("#main .link");
     var rand = Math.floor(Math.random() * tds.length);
-    KeepWatchingCheck($(tds[rand]));
-    location.href = tds[rand].href;
+    // KeepWatchingCheck($(tds[rand]));
+    tds[rand].click();
 }
 
 // function slideItemClick(i) {
@@ -178,18 +178,18 @@ window.addEventListener("pageshow", function (event) {
 //     alert("Obrigado pela preferência!");
 // };
 
-$("#main").on('click', '.link', function () {
-    KeepWatchingCheck($(this));
-});
+// $("#main").on('click', '.link', function () {
+//     KeepWatchingCheck($(this));
+// });
 
 $("#mainSlides").on('click', '.slide-img', function () {
-    KeepWatchingCheck($(this).find('a'));
-    location.href = $(this).find('a').attr('href');
+    // KeepWatchingCheck($(this).find('a'));
+    // location.href = $(this).find('a').attr('href');
 });
 
 $("#keepWatching").on('click', '.slide-img', function () {
-    KeepWatchingCheck($(this).find('a'));
-    location.href = $(this).find('a').attr('href');
+    // KeepWatchingCheck($(this).find('a'));
+    // location.href = $(this).find('a').attr('href');
 });
 
 $("#main div img").click(function () {
@@ -199,21 +199,25 @@ $("#main div img").click(function () {
     });
 });
 
-$("#searchResults").on('click', '.found', function () {
-    KeepWatchingCheck($(this).find('div').find('a'));
-    location.href = $(this).find('div').find('a').attr('href');
-});
+// $("#searchResults").on('click', '.found', function () {
+//     KeepWatchingCheck($(this).find('div').find('a'));
+//     location.href = $(this).find('div').find('a').attr('href');
+// });
 
-$("#editUN").on('click', function() {
+$("#editUN").on('click', function () {
     username = prompt("Insira seu nome:", "Harry Potter");
-        if (username != null) {
-            if (nameInputed == false) {
-                nameInputed = true;
-		setCookie('nameInputed', nameInputed, 365);
-	    }
-            setCookie('username', username, 365);
-            alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+    if (username != null) {
+        if (nameInputed == false) {
+            nameInputed = true;
+            setCookie('nameInputed', nameInputed, 365);
         }
+        setCookie('username', username, 365);
+        alert("Seja bem-vindo(a) ao UrAnimes, " + username + "!");
+    }
+})
+
+$(".hamburguer").on('click', function () {
+    $("ul.nav").toggleClass('active')
 })
 
 function KeepWatchingCheck(obj) {
@@ -223,6 +227,33 @@ function KeepWatchingCheck(obj) {
             if (watchList != '') {
                 for (let i = 0; i < watchList.length; i++) {
                     if (watchList[i].includes(obj.text())) {
+                        watchList.splice(i, 1);
+                        watchList.unshift(response[j].name);
+                        break;
+                    } else {
+                        if (i == watchList.length - 1) {
+                            watchList.unshift(response[j].name);
+                            break;
+                        }
+                    }
+                }
+            } else {
+                watchList.unshift(response[j].name);
+            }
+            break;
+        }
+    }
+    localStorage.watchList = JSON.stringify(watchList);
+    // $.cookie('watchList', JSON.stringify(watchList));
+}
+
+function KeepWatchingNewCheck(obj) {
+
+    for (let j = 0; j < response.length; j++) {
+        if (response[j].name.includes(obj.attr('title'))) {
+            if (watchList != '') {
+                for (let i = 0; i < watchList.length; i++) {
+                    if (watchList[i].includes(obj.attr('title'))) {
                         watchList.splice(i, 1);
                         watchList.unshift(response[j].name);
                         break;

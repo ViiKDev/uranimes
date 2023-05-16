@@ -24,6 +24,7 @@
      } 
   </script> -->
    <link rel="stylesheet" href="wwwroot/css/sliderStyle.css">
+   <link rel="stylesheet" href="wwwroot/css/modals.css">
    <link rel="stylesheet" href="wwwroot/css/style.css">
    <script defer src="wwwroot/js/pageStyle.js"></script>
    <link rel="icon" href="wwwroot/img/favicon.png" type="image/x-icon">
@@ -53,8 +54,11 @@
    <header class="p-3 nav-themed fixed-top">
       <div class="container">
          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none" style="/* margin-right:30px; */">
-               <img src="wwwroot/img/logo.png" style="margin-bottom:5px;" width="110px;">
+            <div class="hamburguer">
+               <button class="botao"><i class="fa fa-bars"></i></button>
+            </div>
+            <a href="" class="logo d-flex align-items-center mb-lg-0 text-white text-decoration-none">
+               <img src="wwwroot/img/logo.png" width="110px;">
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                <li><a class="nav-link px-2 active">Início</a></li>
@@ -156,6 +160,9 @@
    </h1>
    <div class="scrollingArea">
       <div id="main"></div>
+
+      <!-- Footer -->
+
       <div id="Contact" class="footer" style="margin-top:20px;">
          <div class="footer-content">
             <h3>VKDev</h3>
@@ -175,11 +182,27 @@
       </div>
       <a class="back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
    </div>
+
+   <!-- Modals -->
+
+   <div id="animeDesc" class="modal">
+      <div id="animeDescContent"></div>
+      <button class="close" rel="modal:close"><span class="modal-close">x</span></button>
+   </div>
+   <div id="backModal" class=""></div>
+
+   <a rel="modal:open" style="display:none;" href="#animeDesc"></a>
+   <a rel="modal:close" style="display:none;">x</a>
+
+   <!-- Scripts -->
+
    <script src="wwwroot/bootstrap/js/bootstrap.bundle.js"></script>
-   <script src="wwwroot/js/news.js"></script>
+   <script defer src="wwwroot/js/modals.js"></script>
    <script defer src="wwwroot/js/initializer.js"></script>
    <script defer src="wwwroot/js/animeList.js" type="module"></script>
+   <script defer src="wwwroot/js/animeDescManager.js" type="module"></script>
    <script defer src="wwwroot/js/script.js"></script>
+   <script defer src="wwwroot/js/news.js"></script>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
    <script defer src="wwwroot/js/slider.js"></script>
 

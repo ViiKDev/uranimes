@@ -31,6 +31,7 @@ $(".slide .slide-img").each(function (i, obj) {
     $(this).attr('style', 'background-image: url("' + data[numArray[i]].img + '");');
     $(this).find('a').attr('href', data[numArray[i]].path);
     $(this).find('a').text(data[numArray[i]].name);
+    $(this).find('a').attr('title', data[numArray[i]].name);
 });
 
 // console.log(numArray);
@@ -84,6 +85,7 @@ if (watchList != '') {
         $(this).attr('style', 'background-image: url("' + item.img + '");');
         $(this).find('a').attr('href', item.path);
         $(this).find('a').text(item.name);
+        $(this).find('a').attr('title', item.name);
     });
 }
 
