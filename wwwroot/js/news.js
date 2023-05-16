@@ -1,5 +1,6 @@
-﻿var news = "Novos animes: Tonikaku Kawaii, Kimetsu no Yaiba!\nContinuação de DanMachi (Dungeon ni Deai)";
-let showNewsToUser = 0
+﻿var news = "Novo layout de exibição de animes!\nAproveite ;3";
+let showNewsToUser = 1
+//Change between 0 and 1
 
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
