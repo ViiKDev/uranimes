@@ -28,6 +28,7 @@ body {
     /* background: url(../img/bg.jpg) fixed center center;
 	background-size: cover;
 	overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .link {

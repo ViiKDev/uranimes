@@ -1,6 +1,7 @@
 $("a[rel='modal:open']").on('click', function () {
     addBackModal()
     addModals(this.hash)
+    $("button[rel='modal:close']").addClass('show')
     // addDynamicScript()
 })
 
@@ -9,6 +10,7 @@ $("[rel='modal:close']").on('click', function () {
     removeModals('.modal')
     removeHash()
     removeDynamicScript()
+    $("button[rel='modal:close']").removeClass('show')
 })
 
 $("#backModal").on('click', function () {
@@ -16,6 +18,7 @@ $("#backModal").on('click', function () {
     removeModals('.modal')
     removeHash()
     removeDynamicScript()
+    $("button[rel='modal:close']").removeClass('show')
 })
 
 function addBackModal() {
@@ -28,6 +31,7 @@ function removeBackModal() {
 
 function addModals(m) {
     $(m).addClass('show')
+    document.querySelector(m).scrollTop = 0
     $('body').addClass('modal-open')
 }
 
@@ -47,4 +51,21 @@ function addDynamicScript() {
 
 function removeDynamicScript() {
     $("body script.dynamic").remove()
+}
+
+function scrollSmoothTo(e) {
+    let el = e
+    let elOffset = el.offset().top
+    let elHeight = el.height()
+    let windowHeight = $(window).height()
+    let offset
+
+    if (elHeight < windowHeight) {
+        offset = elOffset - elHeight
+    }
+    else {
+        offset = elOffset
+    }
+    let speed = 1000
+    $('#animeDesc').animate({ scrollTop: offset }, speed)
 }

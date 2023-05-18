@@ -49,10 +49,20 @@ body.modal-open {
     z-index: 1031;
 }
 
+.btn-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.btn-wrapper:has(.show) {
+    display: block;
+}
+
 button.close {
     position: fixed;
-    top: 1%;
-    left: 97%;
+    top: 5%;
+    left: 93%;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
@@ -63,9 +73,14 @@ button.close {
     width: 30px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.9);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: 1033;
+}
+
+button.close.show {
+    display: flex;
 }
 
 .modal-close {
@@ -217,6 +232,10 @@ button.close {
     #animeDescContent .ep-list {
         grid-template-columns: repeat(5, 1fr);
     }
+
+    button.close {
+        top: 5%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -227,10 +246,20 @@ button.close {
     #animeDescContent .ep-list {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    button.close {
+        top: 8.7%;
+        left: 92%;
+    }
 }
 
 @media (max-width: 540px) {
     #animeDescContent .ep-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    button.close {
+        top: 5%;
+        left: 90%;
     }
 }

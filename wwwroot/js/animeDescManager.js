@@ -59,8 +59,18 @@ function prepareModal(title) {
         // $("#animeDescContent").append($("<p>" + prop + "</p>"))
         $("#animeDescContent").append($("<div id=" + prop + " class='hide ep-list'></div>"))
         for (let prop2 in animeInfo.eps[prop]) {
-            console.log(prop == "Movies")
-            $("#animeDescContent #" + prop).append($("<a class='list-link' target='_blank' title='" + animeInfo.name + "' href=" + animeInfo.eps[prop][prop2] + ">" + prop2 + "</a>"))
+            let info = animeInfo.eps[prop][prop2]
+            if (prop == "Movies") {
+                // console.log(prop2, animeInfo.eps[prop][prop2])
+                for (let m in info) {
+                    let len = Object.keys(info).length
+                    let idx = Object.keys(info).indexOf(m) + 1
+                    let phrase = len > 1 ? prop2 + ' - Ep' + idx : prop2
+                    $("#animeDescContent #" + prop).append($("<a class='list-link' target='_blank' title='" + animeInfo.name + "' href=" + info[m] + ">" + phrase + "</a>"))
+                }
+            } else {
+                $("#animeDescContent #" + prop).append($("<a class='list-link' target='_blank' title='" + animeInfo.name + "' href=" + info + ">" + prop2 + "</a>"))
+            }
             // console.log(prop2, animeInfo.eps[prop][prop2])
         }
     }
