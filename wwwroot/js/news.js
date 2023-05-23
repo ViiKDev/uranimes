@@ -1,7 +1,5 @@
-﻿var news = "Mais de 50 novos animes adicionados, incluindo os animes: Oshi no Ko, Konosuba, Fullmetal Alchemist!! :o\nAproveite ;3";
-let showNewsToUser = 0
-//Change between 0 and 1
-
+﻿var news = "Agora sim, Oshi no Ko está realmente no ar juntamente com os novos episódios de Kimetsu no Yaiba!! :o\nAproveite ;3";
+let showNewsToUser = "1.0.0"
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
     if (recentNews != showNewsToUser) {
