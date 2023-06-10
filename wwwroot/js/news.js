@@ -1,4 +1,4 @@
-﻿var news = "Novo anime no ar: "Araburu Kisetsu"!\nAproveite ;3";
+﻿var news = "Novo anime no ar: \"Araburu Kisetsu\"!\nAproveite ;3";
 let showNewsToUser = "1.0.1"
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
