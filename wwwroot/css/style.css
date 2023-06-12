@@ -434,6 +434,12 @@ NAVBAR OLD*/
     display: flex;
     margin: 0 10px;
     align-items: center;
+    color: var(--color-links);
+    cursor: pointer;
+}
+
+#main div:hover a {
+    color: purple;
 }
 
 #main div img {
@@ -474,8 +480,8 @@ NAVBAR OLD*/
 }
 
 .w2ui-centered img {
-    height: 375px;
-    width: 252px;
+    height: 400px;
+    width: 269px;
 }
 
 #searchResults {
@@ -583,6 +589,15 @@ a.logo img {
 
 ul.nav.active {
     display: flex;
+}
+
+.listResults .found div p {
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 80%;
 }
 
 /* Animations */

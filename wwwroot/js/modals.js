@@ -45,12 +45,12 @@ function removeHash() {
         + window.location.search);
 }
 
-function addDynamicScript() {
-    $("body").append($("<script class='dynamic' src='wwwroot/js/dynamicsControl.js'></script>"))
+function addDynamicScript(s = 'dynamicsControl') {
+    $("body").append($("<script class='dynamic' src='wwwroot/js/" + s + ".js'></script>"))
 }
 
-function removeDynamicScript() {
-    $("body script.dynamic").remove()
+function removeDynamicScript(s = 'dynamicsControl') {
+    $("body script[src='wwwroot/js/" + s + ".js'].dynamic").remove()
 }
 
 function scrollSmoothTo(e) {

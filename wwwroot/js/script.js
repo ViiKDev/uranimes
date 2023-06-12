@@ -64,7 +64,7 @@ $(pesquisa).on('input', function () {
         if (searchAnimes(pesquisa.value)) {
             for (let i = 0; i < searchResultList.length; i++) {
                 // $("#searchResults .listResults").append('<div class="found"><h5>' + searchResultList[i].name + '</h5></div>');
-                $("#searchResults .listResults").append('<div class="found"><img src="' + searchResultList[i].img + '"><div><a href="' + searchResultList[i].path + '">' + searchResultList[i].name + '</a><p>Anime Description...</p></div></div>');
+                $("#searchResults .listResults").append('<div class="found"><img src="' + searchResultList[i].img + '"><div><a href="' + searchResultList[i].path + '">' + searchResultList[i].name + '</a><p>' + searchResultList[i].desc + '</p></div></div>');
             }
         } else {
             $("#searchResults .listResults").append('<div class="notFound"><h5>Sem resultados encontrados!</h5><h6>Tente outro título...</h6></div>');
@@ -192,10 +192,11 @@ $("#keepWatching").on('click', '.slide-img', function () {
     // location.href = $(this).find('a').attr('href');
 });
 
-$("#main div img").click(function () {
+$("#main div").on('click', 'img', function () {
+    let title = $(this).parent().children('a').text()
     w2popup.open({
         title: 'Image',
-        body: '<div class="w2ui-centered"><img src="' + $(this).attr('src') + '"></img></div>'
+        body: '<div class="w2ui-centered"><img title="' + title + '" src="' + $(this).attr('src') + '"></img></div>'
     });
 });
 

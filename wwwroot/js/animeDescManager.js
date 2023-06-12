@@ -34,6 +34,19 @@ $("#keepWatching").on('click', '.slide-img', function () {
     prepareModal(title)
 });
 
+$(document).on('click', '.w2ui-centered img', function () {
+    let title = $(this).attr('title')
+    w2popup.close()
+    prepareModal(title)
+})
+
+$(document).on('click', '#main div', function (e) {
+    if (!$(e.target).is('img')) {
+        let title = $(this).find('a').attr('title')
+        prepareModal(title)
+    }
+})
+
 function prepareModal(title) {
     $("a[href='#animeDesc']").click()
     let animeInfo = data.filter((e) => e.name == title)
