@@ -90,4 +90,5 @@ function prepareModal(title) {
     $("#animeDescContent div#" + $(".tempChoose").val()).addClass('show')
     $("#animeDescContent div#" + $(".tempChoose").val()).removeClass('hide')
     addDynamicScript()
+    CheckVisitedList($(".ep-list.show"))
 }

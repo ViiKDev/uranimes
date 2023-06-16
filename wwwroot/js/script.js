@@ -289,3 +289,60 @@ function RandomContent(opt) {
         }
     }
 }
+
+function CheckVisitedLinks(obj = false) {
+    if (!obj) return false
+    let visitedLinks = JSON.parse(localStorage.getItem('visitedLinks')) || []
+    let nextEpisodes = JSON.parse(localStorage.getItem('nextEpisodes')) || []
+    let link = obj.attr('href')
+    let next = obj.next()
+    if (!visitedLinks.includes(link)) {
+        visitedLinks.push(link)
+        $(".ep-list .list-link.next-ep").each((_, o) => { $(o).removeClass("next-ep") })
+    } else {
+        console.log("already added")
+    }
+    obj.addClass('visited')
+    nextEpisodes.splice(nextEpisodes.indexOf(obj.href), 1)
+    localStorage.visitedLinks = JSON.stringify(visitedLinks)
+    if (next.length == 0) {
+        localStorage.nextEpisodes = JSON.stringify(nextEpisodes)
+        return false
+    }
+    nextEpisodes.push(next.attr('href'))
+    next.addClass('next-ep')
+    localStorage.nextEpisodes = JSON.stringify(nextEpisodes)
+
+}
+
+function CheckVisitedList(obj = false) {
+    if (!obj) return false
+    let visitedLinks = JSON.parse(localStorage.getItem('visitedLinks')) || []
+    let nextEpisodes = JSON.parse(localStorage.getItem('nextEpisodes')) || []
+    obj.each(function (_, o) {
+        let linkList = $(o).find(".list-link") || []
+        if (linkList.length == 0) return false
+        linkList.each(function (_, lk) {
+            if (visitedLinks.includes(lk.href)) {
+                $(lk).addClass('visited')
+            }
+            if (nextEpisodes.includes(lk.href)) {
+                $(lk).addClass('next-ep')
+            }
+        })
+    })
+}
+
+$(document).on('change', ".tempChoose", function () {
+    CheckVisitedList($(".ep-list.show"))
+})
+
+//Test Purposes
+
+function testFunc() {
+}
+
+//Notes
+
+//when reaches on last episode of temp, change to next one if exists and then change next-ep to
+//the first episode of that temp, and change temp on user screen

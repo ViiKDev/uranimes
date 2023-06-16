@@ -8,7 +8,9 @@
     --color-texts: lightyellow;
     --color-links: lightblue;
     --color-buttons: white;
+    --color-watched: #198754;
     --navbar-height: 10px;
+    --modal-next-ep: #46274c8f;
     /* --color-link-hover: ;
     --color-link-focus: ;
     --color-link-active: ; */
@@ -598,6 +600,18 @@ ul.nav.active {
     -webkit-box-orient: vertical;
     overflow: hidden;
     width: 80%;
+}
+
+#animeDescContent .ep-list a.visited {
+    color: crimson;
+}
+
+.watched {
+    color: var(--color-watched);
+}
+
+#animeDescContent .ep-list a.next-ep:not(:hover) {
+    background-color: var(--modal-next-ep);
 }
 
 /* Animations */

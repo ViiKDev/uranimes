@@ -7,6 +7,7 @@ $("#animeDescContent .tempChoose").on('change', function () {
 
 $(".ep-list .list-link").on('click', function () {
     KeepWatchingNewCheck($(this));
+    CheckVisitedLinks($(this))
 })
 
 $(".read-more span").on('click', function () {
