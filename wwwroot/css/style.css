@@ -484,6 +484,7 @@ NAVBAR OLD*/
 .w2ui-centered img {
     height: 400px;
     width: 269px;
+    cursor: pointer;
 }
 
 #searchResults {
