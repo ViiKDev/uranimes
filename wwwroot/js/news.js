@@ -1,5 +1,5 @@
-﻿var news = "Temporada 1 de Sword Art Online está novamente disponível!\nAproveite ;3";
-let showNewsToUser = "1.0.12"
+﻿var news = "4ª Temp de Kimetsu no Yaiba completa!\nAproveite ;3";
+let showNewsToUser = "1.0.14"
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
     if (recentNews != showNewsToUser) {
