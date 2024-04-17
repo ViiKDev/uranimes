@@ -1,5 +1,5 @@
-﻿var news = "4ª Temp de Kimetsu no Yaiba completa!\nAproveite ;3";
-let showNewsToUser = "1.0.14"
+﻿var news = "Overlord e Black Clover!\nAproveite ;3";
+let showNewsToUser = "1.0.15"
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
     if (recentNews != showNewsToUser) {
