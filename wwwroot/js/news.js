@@ -1,5 +1,5 @@
 ﻿var news = "Overlord e Black Clover!\nAproveite ;3";
-let showNewsToUser = "1.0.15"
+let showNewsToUser = "1.0.16"
 $(document).ready(function () {
     let recentNews = getCookie('recentNews')
     if (recentNews != showNewsToUser) {
