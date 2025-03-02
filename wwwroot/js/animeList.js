@@ -1,4 +1,4 @@
-import animes from '../json/list.json' assert { type: 'json' };
+import animes from '../json/list.json' with { type: 'json' };
 
 var data = animes;
 var numArray = [];
